@@ -1,6 +1,6 @@
 import html
 
-# Arte ASCII final escolhida
+# Arte ASCII escolhida
 ASCII_ART = r"""
                                                                                                                                                                                                                     ▒██▒              ░▓███▓                                                                                                                                                                    
                                                                                                                                                                                         ▒█       ░███             ▒███▓                                                                                                                                                                         
@@ -148,7 +148,7 @@ ASCII_ART = r"""
 def generate_ascii_svg(output_path="ascii.svg"):
     raw_lines = ASCII_ART.split("\n")
 
-    # Remove linhas puramente vazias do início e do fim para evitar grandes lacunas verticais
+    # Remove linhas puramente vazias do início e do fim
     first_idx = 0
     while first_idx < len(raw_lines) and not raw_lines[first_idx].strip():
         first_idx += 1
@@ -159,24 +159,25 @@ def generate_ascii_svg(output_path="ascii.svg"):
 
     lines = raw_lines[first_idx:last_idx + 1] if first_idx <= last_idx else []
 
-    # Parâmetros de dimensão e espaçamento da fonte
+    # Ajuste fino das métricas para alinhamento contínuo perfeito (sem tearing/frestas)
     font_size = 6
-    line_spacing = 7.2
+    line_spacing = 6.0  # Métrica idêntica para colar os blocos na vertical
     char_width = 3.6
 
     max_cols = max(len(line) for line in lines) if lines else 100
     width = int(max_cols * char_width + 10)
     height = int(len(lines) * line_spacing + 10)
 
-    # Animação ágil (18ms por linha)
-    delay_step = 0.018
+    # Animação fluida
+    delay_step = 0.015
 
     svg_header = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <style>
     text {{
-      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
       font-size: {font_size}px;
       white-space: pre;
+      dominant-baseline: hanging;
       fill: #1f2328;
     }}
     @media (prefers-color-scheme: dark) {{
@@ -188,7 +189,7 @@ def generate_ascii_svg(output_path="ascii.svg"):
 
     svg_body = []
     for i, line in enumerate(lines):
-        y = round(10 + i * line_spacing, 2)
+        y = round(5 + i * line_spacing, 2)
         begin_time = round(0.05 + i * delay_step, 3)
         escaped_line = html.escape(line)
 
@@ -208,7 +209,7 @@ def generate_ascii_svg(output_path="ascii.svg"):
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(full_svg)
 
-    print(f"✅ {output_path} gerado com sucesso! ({len(lines)} linhas animadas)")
+    print(f"✅ {output_path} gerado com sucesso sem tearing! ({len(lines)} linhas)")
 
 
 if __name__ == "__main__":
