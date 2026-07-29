@@ -5,8 +5,9 @@
 <img src="./stats.svg" width="620" alt="Contributions in the last year"/>
 
 [linkedin](https://www.linkedin.com/in/mateus-leptokarydis/) &nbsp;·&nbsp; 
-[github](https://github.com/mleptokarydis) &nbsp;·&nbsp; 
-[lattes](http://lattes.cnpq.br) &nbsp;·&nbsp; 
+[github](https://github.com/hcristosm) &nbsp;·&nbsp; 
+[lattes](https://lattes.cnpq.br/4735526517901649) &nbsp;·&nbsp; 
+[orcid](https://orcid.org/0009-0000-5877-5763) &nbsp;·&nbsp; 
 [email](mailto:seu-email@exemplo.com)
 
 </div>
@@ -16,27 +17,24 @@
 > Geologist & M.Sc. Candidate in Geosciences at Unicamp.<br>
 > Practical computer vision and video analysis for slope stability & hazard monitoring.
 
-I combine geological field context with applied computer vision to detect early movement onset<br>
-in slope instability. Currently benchmarking classical algorithms like SIFT against foundational<br>
-vision models like Meta's SAM 2 for video-based slope monitoring in Serra do Mar.
+I combine geological field context with applied computer vision to evaluate and detect early movement onset<br>
+in vegetated slopes. Developed a classical OpenCV pipeline (Canny edge detection, morphological filtering,<br>
+and a 4-pixel kinematic trapping constraint) paired with zero-shot validation via Meta's SAM 2.
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 
-<samp>python &nbsp; opencv &nbsp; sift &nbsp; sam2 &nbsp; qgis &nbsp; gdal &nbsp; docker &nbsp; git &nbsp; linux</samp>
+<samp>python &nbsp; opencv &nbsp; canny &nbsp; sam2 &nbsp; qgis &nbsp; gdal &nbsp; docker &nbsp; git &nbsp; linux</samp>
 
 <img src="./hd-projects.svg" width="620" alt="projects"/>
 
-**[slope-cam-monitoring]**(https://github.com/mleptokarydis/slope-cam-monitoring) &nbsp;·&nbsp; <samp>python, opencv, sam2</samp><br>
-Video analysis pipeline for slope monitoring and movement onset detection.<br>
-Tracks physical target markers in field camera streams, comparing SIFT and SAM 2 for technical viability.
+**[Videomonitoramento-de-encostas](https://github.com/hcristosm/Videomonitoramento-de-encostas)** &nbsp;·&nbsp; <samp>python, opencv, sam2</samp><br>
+Low-cost videomonitoring pipeline for slope movement onset detection.<br>
+Employs Canny edge detection, circularity filtering, and a 4px spatial search constraint to track target grids,<br>
+validated against zero-shot Meta SAM 2 segmentation.
 
-**[edex-geo-dashboard]**(https://github.com/mleptokarydis/edex-geo-dashboard) &nbsp;·&nbsp; <samp>python, firebase, web</samp><br>
-Futuristic CLI/dashboard interface inspired by cassette-futurism & cyberpunk aesthetics<br>
-to visualize geotechnical video telemetry and movement onset triggers.
-
-**[geospatial-automation]**(https://github.com/mleptokarydis/geospatial-automation) &nbsp;·&nbsp; <samp>python, gdal, qgis</samp><br>
-Automated spatial data processing scripts for geological risk assessment,<br>
-landslide susceptibility, and terrain evaluation.
+**[image_batch_upscale](https://github.com/hcristosm/image_batch_upscale)** &nbsp;·&nbsp; <samp>python, image-processing</samp><br>
+Batch image upscaling and enhancement script in Python,<br>
+designed to automate super-resolution workflows and image pre-processing.
 
 <img src="./hd-stats.svg" width="620" alt="stats"/>
 
