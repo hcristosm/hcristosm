@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./ascii.svg?v=2" width="460" alt="Mateus Leptokarydis"/>
+<img src="./ascii.svg?v=3" width="460" alt="Mateus Leptokarydis"/>
 
 <img src="./stats.svg" width="620" alt="Contributions in the last year"/>
 
