@@ -53,16 +53,9 @@ Employs Watershed segmentation and distance transforms to separate touching part
 
 <img src="./hd-about-this-page.svg" width="620" alt="about this page"/>
 
-Every graphic here is generated, not embedded from anyone else's server.<br>
-`ascii.svg` is a photo pushed through a character ramp by<br>
-[`scripts/make_portrait.py`](scripts/make_portrait.py); the stat graphics and<br>
-these section headings are drawn by [a scheduled action](.github/workflows/stats.yml)<br>
-straight from the GitHub GraphQL API, once a day, committing only what changed.
+Every graphic on this page is completely self-contained and rendered directly in the repository—no third-party servers, tracking scripts, or external app wrappers.
 
-They animate with SMIL inside the SVG, because GitHub strips scripts from<br>
-READMEs — and since nothing loads from a third party, nothing here can<br>
-rate-limit or go dark. The headings are SVGs for the same reason: GitHub also<br>
-strips CSS, so an image is the only way to put this page's own typeface on them.
-
-The typeface is [JetBrains Mono](scripts/fonts), subset to just the characters<br>
-each graphic draws and inlined as base64.
+* **`ascii.svg`**: Built via [`scripts/make_portrait.py`](scripts/make_portrait.py), pushing character density matrices into an SVG. It animates line-by-line using native SMIL (`<set>` elements), bypassing GitHub's JavaScript stripping.
+* **Telemetry Graphics (`stats.svg`, `streak.svg`, `langs.svg`)**: Custom Python scripts ([`make_stats.py`](scripts/make_stats.py), [`make_streak.py`](scripts/make_streak.py), [`make_langs.py`](scripts/make_langs.py)) query GitHub's GraphQL API to compute contribution streaks, commit counts, and language distribution.
+* **Automation**: Managed by a scheduled GitHub Action ([`.github/workflows/stats.yml`](.github/workflows/stats.yml)) running daily at midnight UTC, committing changes only when stats actually update.
+* **Typography**: Section headers and metrics utilize [JetBrains Mono](scripts/fonts), subsetted to the exact character set used and embedded directly as base64 to preserve custom typography despite GitHub stripping external stylesheets.
