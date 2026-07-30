@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="89" viewBox="0 0 620 89">
+  <style>
+    .header {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      fill: #57606a;
+      letter-spacing: 1.5px;
+    }
+    .label {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 12px;
+      fill: #1f2328;
+    }
+    .value {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 11px;
+      fill: #57606a;
+    }
+    .bar-bg {
+      fill: #e1e4e8;
+      opacity: 0.3;
+      rx: 3px;
+    }
+    .bar-fill {
+      fill: #8b949e;
+      rx: 3px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .header { fill: #8b949e; }
+      .label { fill: #c9d1d9; }
+      .value { fill: #8b949e; }
+      .bar-bg { fill: #30363d; opacity: 0.5; }
+      .bar-fill { fill: #c9d1d9; }
+    }
+  </style>
+
+  <!-- COLUNA 1: BY BYTES -->
+  <text x="20" y="20" class="header">BY BYTES</text>
+  <text x="20" y="42" class="label">jupyter notebook</text>
+  <rect x="110" y="33" width="140" height="8" class="bar-bg"/>
+  <rect x="110" y="33" width="140" height="8" class="bar-fill"/>
+  <text x="260" y="42" class="value">100%</text>
+  <text x="20" y="64" class="label">python</text>
+  <rect x="110" y="55" width="140" height="8" class="bar-bg"/>
+  <rect x="110" y="55" width="4" height="8" class="bar-fill"/>
+  <text x="260" y="64" class="value">0%</text>
+
+  <!-- COLUNA 2: BY REPOS -->
+  <text x="330" y="20" class="header">BY REPOS</text>
+  <text x="330" y="42" class="label">jupyter notebook</text>
+  <rect x="420" y="33" width="140" height="8" class="bar-bg"/>
+  <rect x="420" y="33" width="140" height="8" class="bar-fill"/>
+  <text x="570" y="42" class="value">2</text>
+  <text x="330" y="64" class="label">python</text>
+  <rect x="420" y="55" width="140" height="8" class="bar-bg"/>
+  <rect x="420" y="55" width="140" height="8" class="bar-fill"/>
+  <text x="570" y="64" class="value">2</text>
+</svg>
