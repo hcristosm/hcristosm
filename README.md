@@ -8,7 +8,7 @@
 [github](https://github.com/hcristosm) &nbsp;·&nbsp; 
 [lattes](https://lattes.cnpq.br/4735526517901649) &nbsp;·&nbsp; 
 [orcid](https://orcid.org/0009-0000-5877-5763) &nbsp;·&nbsp; 
-[email](mailto:seu-email@exemplo.com)
+[email](mailto:hcristosm@gmail.com)
 
 </div>
 
