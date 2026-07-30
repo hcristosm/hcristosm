@@ -48,7 +48,6 @@ Employs Watershed segmentation and distance transforms to separate touching part
 
 <img src="./langs.svg" width="620" alt="Top languages by bytes and by repo"/>
 
-<img src="./year.svg" width="620" alt="The last year, one character per day"/>
 
 </div>
 
