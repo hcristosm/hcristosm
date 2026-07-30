@@ -36,6 +36,10 @@ validated against zero-shot Meta SAM 2 segmentation.
 Batch image upscaling and enhancement script in Python,<br>
 designed to automate super-resolution workflows and image pre-processing.
 
+**[GranuLens](https://github.com/hcristosm/granulens)** &nbsp;·&nbsp; <samp>python, opencv, typer, pytest</samp><br>
+Automated digital granulometry & Particle Size Distribution (D10, D50, D90) engine.<br>
+Employs Watershed segmentation and distance transforms to separate touching particles, featuring a CLI and Python API.
+
 <img src="./hd-stats.svg" width="620" alt="stats"/>
 
 <div align="center">
