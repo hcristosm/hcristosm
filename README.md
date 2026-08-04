@@ -32,9 +32,9 @@ Low-cost videomonitoring pipeline for slope movement onset detection.<br>
 Employs Canny edge detection, circularity filtering, and a 4px spatial search constraint to track target grids,<br>
 validated against zero-shot Meta SAM 2 segmentation.
 
-**[image_batch_upscale](https://github.com/hcristosm/image_batch_upscale)** &nbsp;·&nbsp; <samp>python, image-processing</samp><br>
-Batch image upscaling and enhancement script in Python,<br>
-designed to automate super-resolution workflows and image pre-processing.
+**[image_batch_upscale](https://github.com/hcristosm/image_batch_upscale)** &nbsp;·&nbsp; <samp>python, real-esrgan, docker</samp><br>
+Local-first CLI for batch image upscaling via Real-ESRGAN, with optional GFPGAN face restoration.<br>
+Runs on GPU/CPU natively or via Docker, using tile-based processing to avoid memory errors on large images.
 
 **[GranuLens](https://github.com/hcristosm/granulens)** &nbsp;·&nbsp; <samp>python, opencv, typer, pytest</samp><br>
 Automated digital granulometry & Particle Size Distribution (D10, D50, D90) engine.<br>
