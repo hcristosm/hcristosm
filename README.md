@@ -15,11 +15,14 @@
 <img src="./hd-about.svg" width="620" alt="about"/>
 
 > Geologist & M.Sc. Candidate in Geosciences at Unicamp.<br>
-> Practical computer vision and video analysis for slope stability & hazard monitoring.
+> Low-cost videomonitoring for early detection of mass movement onset in vegetated slopes.
 
-I combine geological field context with applied computer vision to evaluate and detect early movement onset<br>
-in vegetated slopes. Developed a classical OpenCV pipeline (Canny edge detection, morphological filtering,<br>
-and a 4-pixel kinematic trapping constraint) paired with zero-shot validation via Meta's SAM 2.
+My dissertation evaluates the technical viability of edge-processed videomonitoring for slope instability<br>
+alerts in the Serra do Mar. A classical OpenCV pipeline (ROI cropping, Canny edge detection, circularity<br>
+filtering, and a 4-pixel kinematic trapping constraint) tracks targets frame-by-frame, cross-validated<br>
+zero-shot against Meta's SAM 2 and clustered via DBSCAN. The approach collapses dense video into compact<br>
+XY coordinate series, cutting per-file payload from ~113 MB to ~20 MB for real-time alerting over<br>
+unstable mobile links.
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 
