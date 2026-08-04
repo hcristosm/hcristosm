@@ -14,15 +14,14 @@
 
 <img src="./hd-about.svg" width="620" alt="about"/>
 
-> Geologist & M.Sc. Candidate in Geosciences at Unicamp.<br>
-> Low-cost videomonitoring for early detection of mass movement onset in vegetated slopes.
+> Geologist turned developer, building computer vision & automation tools for real-world data problems.<br>
+> This profile doubles as a running portfolio — pipelines, CLIs, and self-built infra.
 
-My dissertation evaluates the technical viability of edge-processed videomonitoring for slope instability<br>
-alerts in the Serra do Mar. A classical OpenCV pipeline (ROI cropping, Canny edge detection, circularity<br>
-filtering, and a 4-pixel kinematic trapping constraint) tracks targets frame-by-frame, cross-validated<br>
-zero-shot against Meta's SAM 2 and clustered via DBSCAN. The approach collapses dense video into compact<br>
-XY coordinate series, cutting per-file payload from ~113 MB to ~20 MB for real-time alerting over<br>
-unstable mobile links.
+I write Python across the full stack: classical computer vision pipelines from scratch (OpenCV, Canny,<br>
+watershed segmentation, distance transforms), packaged CLI tools with test coverage (pytest, typer), and<br>
+small automation systems — like the one rendering this very page, which pulls GitHub's API into hand-built<br>
+SVGs animated with native SMIL, no JS. I favor pipelines that are lightweight and validated against ground<br>
+truth or zero-shot baselines (SAM 2, DBSCAN) rather than treated as black boxes.
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 
