@@ -1,6 +1,8 @@
 import os
 import requests
 
+from palette import DARK, LIGHT, rainbow_stripe
+
 USERNAME = "hcristosm"
 TOKEN = os.getenv("GITHUB_TOKEN")
 
@@ -50,26 +52,33 @@ def generate_stats_svg(total_contribs, weeks, output_path="stats.svg"):
 
     svg_header = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <style>
+    .panel {{ fill: {LIGHT['panel_bg']}; }}
+    .frame {{ fill: none; stroke: {LIGHT['panel_border']}; stroke-width: 1.5; }}
     .label {{
       font-family: 'JetBrains Mono', 'Courier New', monospace;
       font-size: 11px;
-      fill: #57606a;
+      letter-spacing: 1px;
+      fill: {LIGHT['text_secondary']};
     }}
     .stat-number {{
       font-family: 'JetBrains Mono', 'Courier New', monospace;
       font-size: 20px;
       font-weight: bold;
-      fill: #1f2328;
+      fill: {LIGHT['accent']};
     }}
     @media (prefers-color-scheme: dark) {{
-      .label {{ fill: #8b949e; }}
-      .stat-number {{ fill: #f0f6fc; }}
+      .panel {{ fill: {DARK['panel_bg']}; }}
+      .frame {{ stroke: {DARK['panel_border']}; }}
+      .label {{ fill: {DARK['text_secondary']}; }}
+      .stat-number {{ fill: {DARK['accent']}; }}
     }}
   </style>
-  <rect width="100%" height="100%" fill="none"/>
-  
-  <text x="20" y="32" class="label">CONTRIBUTIONS IN THE LAST YEAR</text>
-  <text x="20" y="60" class="stat-number">{total_contribs:,}</text>
+  <rect class="panel" x="0" y="0" width="{width}" height="{height}" rx="10"/>
+{rainbow_stripe(20, 4, width - 40, 3)}
+  <rect class="frame" x="0.75" y="0.75" width="{width - 1.5}" height="{height - 1.5}" rx="9.5"/>
+
+  <text x="20" y="42" class="label">CONTRIBUTIONS IN THE LAST YEAR</text>
+  <text x="20" y="68" class="stat-number">{total_contribs:,}</text>
 </svg>
 """
 

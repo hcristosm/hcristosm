@@ -1,5 +1,7 @@
 import html
 
+from palette import DARK, LIGHT, RAINBOW, rainbow_stripe
+
 # Arte ASCII escolhida
 ASCII_ART = r"""
                                                                                                                                                 
@@ -136,42 +138,65 @@ def generate_ascii_svg(output_path="ascii.svg"):
     char_width = 3.6
 
     max_cols = max(len(line) for line in lines) if lines else 100
-    width = int(max_cols * char_width + 10)
-    height = int(len(lines) * line_spacing + 10)
+    art_width = int(max_cols * char_width)
+    art_height = int(len(lines) * line_spacing)
+
+    # Moldura "cassete": borda + faixa arco-íris de selo + respiro ao redor da arte
+    pad = 16
+    stripe_h = 3
+    stripe_gap = 10  # espaço entre a listra e o início da arte
+    text_x = pad
+    text_y0 = pad + stripe_gap
+    width = art_width + pad * 2
+    height = art_height + text_y0 + pad
 
     # Animação fluida
     delay_step = 0.015
 
     svg_header = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="45%" r="75%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.16"/>
+    </radialGradient>
+  </defs>
   <style>
+    .panel {{ fill: {LIGHT['panel_bg']}; }}
+    .frame {{ fill: none; stroke: {LIGHT['panel_border']}; stroke-width: 1.5; }}
     text {{
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
       font-size: {font_size}px;
       white-space: pre;
       dominant-baseline: hanging;
-      fill: #1f2328;
+      fill: {LIGHT['text_primary']};
     }}
     @media (prefers-color-scheme: dark) {{
-      text {{ fill: #f0f6fc; }}
+      .panel {{ fill: {DARK['panel_bg']}; }}
+      .frame {{ stroke: {DARK['panel_border']}; }}
+      text {{ fill: {DARK['accent']}; }}
     }}
   </style>
+  <rect class="panel" x="0" y="0" width="{width}" height="{height}" rx="10"/>
+{rainbow_stripe(pad, pad, width - pad * 2, stripe_h)}
   <g id="ascii-portrait">
 """
 
     svg_body = []
     for i, line in enumerate(lines):
-        y = round(5 + i * line_spacing, 2)
+        y = round(text_y0 + i * line_spacing, 2)
         begin_time = round(0.05 + i * delay_step, 3)
         escaped_line = html.escape(line)
 
         text_node = (
-            f'    <text x="5" y="{y}" visibility="hidden">{escaped_line}'
+            f'    <text x="{text_x}" y="{y}" visibility="hidden">{escaped_line}'
             f'<set attributeName="visibility" from="hidden" to="visible" begin="{begin_time}s" fill="freeze" />'
             f"</text>"
         )
         svg_body.append(text_node)
 
-    svg_footer = """  </g>
+    svg_footer = f"""  </g>
+  <rect x="0" y="0" width="{width}" height="{height}" rx="10" fill="url(#vignette)"/>
+  <rect class="frame" x="0.75" y="0.75" width="{width - 1.5}" height="{height - 1.5}" rx="9.5"/>
 </svg>
 """
 

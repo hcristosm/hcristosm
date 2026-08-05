@@ -2,6 +2,7 @@ import os
 import requests
 
 from lang_icons import LANG_ICONS
+from palette import DARK, LIGHT, rainbow_stripe
 
 USERNAME = "hcristosm"
 TOKEN = os.getenv("GITHUB_TOKEN")
@@ -97,7 +98,7 @@ def lang_icon_svg(lang, x, y):
         scale = icon_size / 24
         path_tags = "".join(f'<path d="{d}"/>' for d in paths)
         return f"""  <g class="lang-icon">
-    <rect x="{x}" y="{tile_y}" width="{tile}" height="{tile}" rx="4" fill="#ffffff" stroke="#d0d7de" stroke-width="0.75"/>
+    <rect x="{x}" y="{tile_y}" width="{tile}" height="{tile}" rx="4" class="tile"/>
     <g transform="translate({x + pad},{tile_y + pad}) scale({scale})" fill="{color}">{path_tags}</g>
   </g>
 """
@@ -124,7 +125,8 @@ def generate_langs_svg(bytes_data, repos_data, output_path="langs.svg"):
     width = 620
     row_height = 22
     max_rows = max(len(sorted_bytes), len(sorted_repos))
-    height = 45 + max_rows * row_height
+    top_offset = 34
+    height = top_offset + 20 + max_rows * row_height
 
     # Margens e Posições recalculadas para acomodar nomes longos sem sobreposição
     col1_icon_x = 20
@@ -142,48 +144,56 @@ def generate_langs_svg(bytes_data, repos_data, output_path="langs.svg"):
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <style>
+    .panel {{ fill: {LIGHT['panel_bg']}; }}
+    .frame {{ fill: none; stroke: {LIGHT['panel_border']}; stroke-width: 1.5; }}
+    .tile {{ fill: {LIGHT['panel_bg_alt']}; stroke: {LIGHT['panel_border']}; stroke-width: 0.75; }}
     .header {{
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
       font-size: 11px;
       font-weight: 600;
-      fill: #57606a;
+      fill: {LIGHT['text_secondary']};
       letter-spacing: 1.5px;
     }}
     .label {{
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
       font-size: 11px;
-      fill: #1f2328;
+      fill: {LIGHT['text_primary']};
     }}
     .value {{
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
       font-size: 11px;
-      fill: #57606a;
+      fill: {LIGHT['text_secondary']};
     }}
     .bar-bg {{
-      fill: #e1e4e8;
-      opacity: 0.3;
+      fill: {LIGHT['bar_track']};
       rx: 3px;
     }}
     .bar-fill {{
-      fill: #8b949e;
+      fill: {LIGHT['bar_fill']};
       rx: 3px;
     }}
     @media (prefers-color-scheme: dark) {{
-      .header {{ fill: #8b949e; }}
-      .label {{ fill: #c9d1d9; }}
-      .value {{ fill: #8b949e; }}
-      .bar-bg {{ fill: #30363d; opacity: 0.5; }}
-      .bar-fill {{ fill: #c9d1d9; }}
+      .panel {{ fill: {DARK['panel_bg']}; }}
+      .frame {{ stroke: {DARK['panel_border']}; }}
+      .tile {{ fill: {DARK['panel_bg_alt']}; stroke: {DARK['panel_border']}; }}
+      .header {{ fill: {DARK['text_secondary']}; }}
+      .label {{ fill: {DARK['text_primary']}; }}
+      .value {{ fill: {DARK['text_secondary']}; }}
+      .bar-bg {{ fill: {DARK['bar_track']}; }}
+      .bar-fill {{ fill: {DARK['bar_fill']}; }}
     }}
   </style>
+  <rect class="panel" x="0" y="0" width="{width}" height="{height}" rx="10"/>
+{rainbow_stripe(20, 4, width - 40, 3)}
+  <rect class="frame" x="0.75" y="0.75" width="{width - 1.5}" height="{height - 1.5}" rx="9.5"/>
 
   <!-- COLUNA 1: BY BYTES -->
-  <text x="{col1_label_x}" y="20" class="header">BY BYTES</text>
+  <text x="{col1_label_x}" y="{top_offset}" class="header">BY BYTES</text>
 """
 
     # Renderiza linhas da Coluna 1 (BY BYTES)
     for i, (lang, size) in enumerate(sorted_bytes):
-        y = 42 + i * row_height
+        y = top_offset + 22 + i * row_height
         pct = int(round((size / total_bytes) * 100))
         bar_w = max(4, int((pct / 100) * col1_bar_max_w))
 
@@ -196,11 +206,11 @@ def generate_langs_svg(bytes_data, repos_data, output_path="langs.svg"):
 
     # Renderiza Coluna 2 (BY REPOS)
     svg_content += f"""\n  <!-- COLUNA 2: BY REPOS -->
-  <text x="{col2_header_x}" y="20" class="header">BY REPOS</text>
+  <text x="{col2_header_x}" y="{top_offset}" class="header">BY REPOS</text>
 """
 
     for i, (lang, count) in enumerate(sorted_repos):
-        y = 42 + i * row_height
+        y = top_offset + 22 + i * row_height
         bar_w = max(4, int((count / max_repos) * col2_bar_max_w))
 
         svg_content += lang_icon_svg(lang, col2_icon_x, y)
