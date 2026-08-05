@@ -1,6 +1,8 @@
 import os
 import requests
 
+from lang_icons import LANG_ICONS
+
 USERNAME = "hcristosm"
 TOKEN = os.getenv("GITHUB_TOKEN")
 
@@ -55,6 +57,61 @@ def fetch_languages_data():
 
     return bytes_by_lang, repos_by_lang
 
+def lang_icon_letters(lang):
+    """Retorna 1-2 letras representativas da linguagem para o badge do ícone."""
+    overrides = {
+        "jupyter notebook": "PY",
+        "c++": "C+",
+        "c#": "C#",
+        "objective-c": "OC",
+        "shell": "SH",
+        "dockerfile": "DK",
+        "javascript": "JS",
+        "typescript": "TS",
+    }
+    if lang in overrides:
+        return overrides[lang]
+    words = lang.replace("-", " ").split()
+    if len(words) >= 2:
+        return (words[0][0] + words[1][0]).upper()
+    return lang[:2].upper()
+
+
+def lang_icon_color(lang):
+    """Cor determinística (paleta fixa e discreta) para o badge, calculada a partir do nome."""
+    palette = ["#6e7681", "#57606a", "#8b949e", "#768390", "#6a737d"]
+    return palette[sum(ord(c) for c in lang) % len(palette)]
+
+
+def lang_icon_svg(lang, x, y):
+    """Ícone de 18x18: logo oficial da linguagem (cor de marca) sobre um tile neutro,
+    ou, na ausência de um logo conhecido, um badge com as iniciais da linguagem."""
+    tile = 18
+    tile_y = y - tile + 4
+
+    icon = LANG_ICONS.get(lang)
+    if icon:
+        color, paths = icon
+        icon_size = 13
+        pad = (tile - icon_size) / 2
+        scale = icon_size / 24
+        path_tags = "".join(f'<path d="{d}"/>' for d in paths)
+        return f"""  <g class="lang-icon">
+    <rect x="{x}" y="{tile_y}" width="{tile}" height="{tile}" rx="4" fill="#ffffff" stroke="#d0d7de" stroke-width="0.75"/>
+    <g transform="translate({x + pad},{tile_y + pad}) scale({scale})" fill="{color}">{path_tags}</g>
+  </g>
+"""
+
+    letters = lang_icon_letters(lang)
+    color = lang_icon_color(lang)
+    font_size = 7 if len(letters) > 1 else 8
+    return f"""  <g class="lang-icon">
+    <rect x="{x}" y="{tile_y}" width="{tile}" height="{tile}" rx="4" fill="{color}" opacity="0.85"/>
+    <text x="{x + tile / 2}" y="{tile_y + tile / 2 + 3}" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace" font-size="{font_size}" font-weight="700" fill="#ffffff">{letters}</text>
+  </g>
+"""
+
+
 def generate_langs_svg(bytes_data, repos_data, output_path="langs.svg"):
     # Ordena top 5 por bytes
     sorted_bytes = sorted(bytes_data.items(), key=lambda x: x[1], reverse=True)[:5]
@@ -70,13 +127,15 @@ def generate_langs_svg(bytes_data, repos_data, output_path="langs.svg"):
     height = 45 + max_rows * row_height
 
     # Margens e Posições recalculadas para acomodar nomes longos sem sobreposição
-    col1_label_x = 20
+    col1_icon_x = 20
+    col1_label_x = 42
     col1_bar_x = 160        # Empurrado para a direita para dar espaço ao "jupyter notebook"
     col1_bar_max_w = 80
     col1_val_x = 250
 
     col2_header_x = 310
-    col2_label_x = 310
+    col2_icon_x = 310
+    col2_label_x = 332
     col2_bar_x = 450        # Empurrado para a direita na segunda coluna
     col2_bar_max_w = 80
     col2_val_x = 540
@@ -128,6 +187,7 @@ def generate_langs_svg(bytes_data, repos_data, output_path="langs.svg"):
         pct = int(round((size / total_bytes) * 100))
         bar_w = max(4, int((pct / 100) * col1_bar_max_w))
 
+        svg_content += lang_icon_svg(lang, col1_icon_x, y)
         svg_content += f"""  <text x="{col1_label_x}" y="{y}" class="label">{lang}</text>
   <rect x="{col1_bar_x}" y="{y - 9}" width="{col1_bar_max_w}" height="8" class="bar-bg"/>
   <rect x="{col1_bar_x}" y="{y - 9}" width="{bar_w}" height="8" class="bar-fill"/>
@@ -143,6 +203,7 @@ def generate_langs_svg(bytes_data, repos_data, output_path="langs.svg"):
         y = 42 + i * row_height
         bar_w = max(4, int((count / max_repos) * col2_bar_max_w))
 
+        svg_content += lang_icon_svg(lang, col2_icon_x, y)
         svg_content += f"""  <text x="{col2_label_x}" y="{y}" class="label">{lang}</text>
   <rect x="{col2_bar_x}" y="{y - 9}" width="{col2_bar_max_w}" height="8" class="bar-bg"/>
   <rect x="{col2_bar_x}" y="{y - 9}" width="{bar_w}" height="8" class="bar-fill"/>
