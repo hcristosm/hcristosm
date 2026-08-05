@@ -113,10 +113,17 @@ def lang_icon_svg(lang, x, y):
 """
 
 
+# Linguagens cujo tamanho em bytes reflete dado embutido (imagens/outputs em
+# base64), não volume de código escrito — distorceriam o ranking "BY BYTES".
+# Continuam contadas normalmente em "BY REPOS".
+BYTES_EXCLUDE = {"jupyter notebook"}
+
+
 def generate_langs_svg(bytes_data, repos_data, output_path="langs.svg"):
-    # Ordena top 5 por bytes
-    sorted_bytes = sorted(bytes_data.items(), key=lambda x: x[1], reverse=True)[:5]
-    total_bytes = sum(bytes_data.values()) if bytes_data else 1
+    # Ordena top 5 por bytes (excluindo linguagens que distorcem por dado embutido)
+    bytes_for_ranking = {k: v for k, v in bytes_data.items() if k not in BYTES_EXCLUDE}
+    sorted_bytes = sorted(bytes_for_ranking.items(), key=lambda x: x[1], reverse=True)[:5]
+    total_bytes = sum(bytes_for_ranking.values()) if bytes_for_ranking else 1
 
     # Ordena top 5 por repositórios
     sorted_repos = sorted(repos_data.items(), key=lambda x: x[1], reverse=True)[:5]
