@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="108" viewBox="0 0 620 108">
+  <style>
+    text {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      fill: #c9722b;
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #ffb347; }
+    }
+  </style>
+  <text x="2" y="18">Geologist turned developer, building computer vision &amp;</text>
+  <text x="2" y="44">automation tools for real-world data problems. This profile</text>
+  <text x="2" y="70">doubles as a running portfolio — pipelines, CLIs, and</text>
+  <text x="2" y="96">self-built infra.</text>
+</svg>

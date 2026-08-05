@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="180" viewBox="0 0 620 180">
+  <style>
+    text {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 14px;
+      font-weight: 600;
+      fill: #4a2e18;
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #f2dcb0; }
+    }
+  </style>
+  <text x="2" y="16">I write Python across the full stack: classical computer vision</text>
+  <text x="2" y="38">pipelines from scratch (OpenCV, Canny, watershed segmentation, distance</text>
+  <text x="2" y="60">transforms), packaged CLI tools with test coverage (pytest, typer), and</text>
+  <text x="2" y="82">small automation systems — like the one rendering this very page, which</text>
+  <text x="2" y="104">pulls GitHub&#x27;s API into hand-built SVGs animated with native SMIL, no</text>
+  <text x="2" y="126">JS. I favor pipelines that are lightweight and validated against ground</text>
+  <text x="2" y="148">truth or zero-shot baselines (SAM 2, DBSCAN) rather than treated as</text>
+  <text x="2" y="170">black boxes.</text>
+</svg>

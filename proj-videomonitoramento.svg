@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="84" viewBox="0 0 620 84">
+  <style>
+    text {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #4a2e18;
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #f2dcb0; }
+    }
+  </style>
+  <text x="2" y="15">Low-cost videomonitoring pipeline for slope movement onset detection. Employs</text>
+  <text x="2" y="35">Canny edge detection, circularity filtering, and a 4px spatial search</text>
+  <text x="2" y="55">constraint to track target grids, validated against zero-shot Meta SAM 2</text>
+  <text x="2" y="75">segmentation.</text>
+</svg>

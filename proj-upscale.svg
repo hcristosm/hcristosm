@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="64" viewBox="0 0 620 64">
+  <style>
+    text {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #4a2e18;
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #f2dcb0; }
+    }
+  </style>
+  <text x="2" y="15">Local-first CLI for batch image upscaling via Real-ESRGAN, with optional</text>
+  <text x="2" y="35">GFPGAN face restoration. Runs on GPU/CPU natively or via Docker, using</text>
+  <text x="2" y="55">tile-based processing to avoid memory errors on large images.</text>
+</svg>
