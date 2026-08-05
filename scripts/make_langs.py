@@ -194,14 +194,16 @@ def generate_langs_svg(bytes_data, repos_data, output_path="langs.svg"):
     # Renderiza linhas da Coluna 1 (BY BYTES)
     for i, (lang, size) in enumerate(sorted_bytes):
         y = top_offset + 22 + i * row_height
-        pct = int(round((size / total_bytes) * 100))
-        bar_w = max(4, int((pct / 100) * col1_bar_max_w))
+        raw_pct = (size / total_bytes) * 100
+        pct = int(round(raw_pct))
+        bar_w = max(4, int((raw_pct / 100) * col1_bar_max_w))
+        pct_label = "&lt;1%" if pct == 0 and size > 0 else f"{pct}%"
 
         svg_content += lang_icon_svg(lang, col1_icon_x, y)
         svg_content += f"""  <text x="{col1_label_x}" y="{y}" class="label">{lang}</text>
   <rect x="{col1_bar_x}" y="{y - 9}" width="{col1_bar_max_w}" height="8" class="bar-bg"/>
   <rect x="{col1_bar_x}" y="{y - 9}" width="{bar_w}" height="8" class="bar-fill"/>
-  <text x="{col1_val_x}" y="{y}" class="value">{pct}%</text>
+  <text x="{col1_val_x}" y="{y}" class="value">{pct_label}</text>
 """
 
     # Renderiza Coluna 2 (BY REPOS)
