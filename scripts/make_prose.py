@@ -86,6 +86,11 @@ PROJECTS = {
         "Automated digital granulometry & Particle Size Distribution (D10, D50, D90) engine. Employs Watershed "
         "segmentation and distance transforms to separate touching particles, featuring a CLI and Python API."
     ),
+    "proj-orca.svg": (
+        "Local-first dashboard cross-referencing CPRM/SGB geological risk sectors with recent INMET rainfall "
+        "data, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. "
+        "GeoPandas + DuckDB pipeline, no backend or paid API required."
+    ),
 }
 
 

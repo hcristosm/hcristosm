@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="84" viewBox="0 0 620 84">
+  <style>
+    text {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #4a2e18;
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #f2dcb0; }
+    }
+  </style>
+  <text x="2" y="15">Local-first dashboard cross-referencing CPRM/SGB geological risk sectors with</text>
+  <text x="2" y="35">recent INMET rainfall data, flagging sectors above a configurable</text>
+  <text x="2" y="55">accumulated-rainfall threshold on an interactive map. GeoPandas + DuckDB</text>
+  <text x="2" y="75">pipeline, no backend or paid API required.</text>
+</svg>

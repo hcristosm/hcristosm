@@ -24,6 +24,9 @@
 
 <img src="./hd-projects.svg" width="620" alt="projects"/>
 
+**[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; <samp>python, geopandas, streamlit, pytest</samp>
+<img src="./proj-orca.svg" width="620" alt="Local-first dashboard cross-referencing CPRM/SGB geological risk sectors with recent INMET rainfall data, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. GeoPandas + DuckDB pipeline, no backend or paid API required."/>
+
 **[Videomonitoramento-de-encostas](https://github.com/hcristosm/Videomonitoramento-de-encostas)** &nbsp;·&nbsp; <samp>python, opencv, sam2</samp>
 <img src="./proj-videomonitoramento.svg" width="620" alt="Low-cost videomonitoring pipeline for slope movement onset detection. Employs Canny edge detection, circularity filtering, and a 4px spatial search constraint to track target grids, validated against zero-shot Meta SAM 2 segmentation."/>
 
