@@ -22,7 +22,7 @@
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 
-<img src="./stack.svg" width="620" alt="python, opencv, canny, sam2, qgis, gdal, docker, git, linux"/>
+<img src="./stack.svg" width="620" alt="python, go, opencv, canny, sam2, qgis, gdal, docker, git, linux"/>
 
 <img src="./hd-projects.svg" width="620" alt="projects"/>
 

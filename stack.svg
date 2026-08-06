@@ -27,28 +27,31 @@
   <rect class="pill" x="20" y="26" width="66" height="22" rx="11.0"/>
   <circle cx="33" cy="37.0" r="3" fill="#e2574c"/>
   <text x="43" y="40.52" class="pill-text">python</text>
-  <rect class="pill" x="94" y="26" width="66" height="22" rx="11.0"/>
+  <rect class="pill" x="94" y="26" width="39" height="22" rx="11.0"/>
   <circle cx="107" cy="37.0" r="3" fill="#f2984a"/>
-  <text x="117" y="40.52" class="pill-text">opencv</text>
-  <rect class="pill" x="168" y="26" width="60" height="22" rx="11.0"/>
-  <circle cx="181" cy="37.0" r="3" fill="#f5c257"/>
-  <text x="191" y="40.52" class="pill-text">canny</text>
-  <rect class="pill" x="236" y="26" width="53" height="22" rx="11.0"/>
-  <circle cx="249" cy="37.0" r="3" fill="#8a9a5b"/>
-  <text x="259" y="40.52" class="pill-text">sam2</text>
-  <rect class="pill" x="297" y="26" width="53" height="22" rx="11.0"/>
-  <circle cx="310" cy="37.0" r="3" fill="#5b8a8a"/>
-  <text x="320" y="40.52" class="pill-text">qgis</text>
-  <rect class="pill" x="358" y="26" width="53" height="22" rx="11.0"/>
-  <circle cx="371" cy="37.0" r="3" fill="#7d6b96"/>
-  <text x="381" y="40.52" class="pill-text">gdal</text>
-  <rect class="pill" x="419" y="26" width="66" height="22" rx="11.0"/>
-  <circle cx="432" cy="37.0" r="3" fill="#e2574c"/>
-  <text x="442" y="40.52" class="pill-text">docker</text>
-  <rect class="pill" x="493" y="26" width="46" height="22" rx="11.0"/>
-  <circle cx="506" cy="37.0" r="3" fill="#f2984a"/>
-  <text x="516" y="40.52" class="pill-text">git</text>
+  <text x="117" y="40.52" class="pill-text">go</text>
+  <rect class="pill" x="141" y="26" width="66" height="22" rx="11.0"/>
+  <circle cx="154" cy="37.0" r="3" fill="#f5c257"/>
+  <text x="164" y="40.52" class="pill-text">opencv</text>
+  <rect class="pill" x="215" y="26" width="60" height="22" rx="11.0"/>
+  <circle cx="228" cy="37.0" r="3" fill="#8a9a5b"/>
+  <text x="238" y="40.52" class="pill-text">canny</text>
+  <rect class="pill" x="283" y="26" width="53" height="22" rx="11.0"/>
+  <circle cx="296" cy="37.0" r="3" fill="#5b8a8a"/>
+  <text x="306" y="40.52" class="pill-text">sam2</text>
+  <rect class="pill" x="344" y="26" width="53" height="22" rx="11.0"/>
+  <circle cx="357" cy="37.0" r="3" fill="#7d6b96"/>
+  <text x="367" y="40.52" class="pill-text">qgis</text>
+  <rect class="pill" x="405" y="26" width="53" height="22" rx="11.0"/>
+  <circle cx="418" cy="37.0" r="3" fill="#e2574c"/>
+  <text x="428" y="40.52" class="pill-text">gdal</text>
+  <rect class="pill" x="466" y="26" width="66" height="22" rx="11.0"/>
+  <circle cx="479" cy="37.0" r="3" fill="#f2984a"/>
+  <text x="489" y="40.52" class="pill-text">docker</text>
+  <rect class="pill" x="540" y="26" width="46" height="22" rx="11.0"/>
+  <circle cx="553" cy="37.0" r="3" fill="#f5c257"/>
+  <text x="563" y="40.52" class="pill-text">git</text>
   <rect class="pill" x="20" y="58" width="60" height="22" rx="11.0"/>
-  <circle cx="33" cy="69.0" r="3" fill="#f5c257"/>
+  <circle cx="33" cy="69.0" r="3" fill="#8a9a5b"/>
   <text x="43" y="72.52" class="pill-text">linux</text>
 </svg>

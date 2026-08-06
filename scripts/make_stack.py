@@ -4,7 +4,7 @@ resto da página (selo de cassete + marcador de cor rotativo por pill)."""
 
 from palette import DARK, LIGHT, RAINBOW, rainbow_stripe
 
-STACK = ["python", "opencv", "canny", "sam2", "qgis", "gdal", "docker", "git", "linux"]
+STACK = ["python", "go", "opencv", "canny", "sam2", "qgis", "gdal", "docker", "git", "linux"]
 
 WIDTH = 620
 FONT_SIZE = 11
