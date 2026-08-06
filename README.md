@@ -27,18 +27,23 @@
 <img src="./hd-projects.svg" width="620" alt="projects"/>
 
 **[declutter](https://github.com/hcristosm/declutter)** &nbsp;·&nbsp; <samp>go, cobra, bubbletea</samp>
+
 <img src="./proj-declutter.svg" width="620" alt="AI-driven semantic file organizer — single Go binary, zero runtime dependencies. Scans a directory, asks an OpenAI-compatible or local Ollama endpoint how the SHA-256-hashed files should be organized, shows an interactive Bubble Tea diff, and only touches disk on confirmation. Every run is logged to a JSON history file for full undo."/>
 
 **[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; <samp>python, geopandas, streamlit, pytest</samp>
+
 <img src="./proj-orca.svg" width="620" alt="Local-first dashboard cross-referencing CPRM/SGB geological risk sectors with recent INMET rainfall data, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. GeoPandas + DuckDB pipeline, no backend or paid API required."/>
 
 **[Videomonitoramento-de-encostas](https://github.com/hcristosm/Videomonitoramento-de-encostas)** &nbsp;·&nbsp; <samp>python, opencv, sam2</samp>
+
 <img src="./proj-videomonitoramento.svg" width="620" alt="Low-cost videomonitoring pipeline for slope movement onset detection. Employs Canny edge detection, circularity filtering, and a 4px spatial search constraint to track target grids, validated against zero-shot Meta SAM 2 segmentation."/>
 
 **[image_batch_upscale](https://github.com/hcristosm/image_batch_upscale)** &nbsp;·&nbsp; <samp>python, real-esrgan, docker</samp>
+
 <img src="./proj-upscale.svg" width="620" alt="Local-first CLI for batch image upscaling via Real-ESRGAN, with optional GFPGAN face restoration. Runs on GPU/CPU natively or via Docker, using tile-based processing to avoid memory errors on large images."/>
 
 **[GranuLens](https://github.com/hcristosm/granulens)** &nbsp;·&nbsp; <samp>python, opencv, typer, pytest</samp>
+
 <img src="./proj-granulens.svg" width="620" alt="Automated digital granulometry & Particle Size Distribution (D10, D50, D90) engine. Employs Watershed segmentation and distance transforms to separate touching particles, featuring a CLI and Python API."/>
 
 <img src="./hd-stats.svg" width="620" alt="stats"/>
