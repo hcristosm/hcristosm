@@ -73,6 +73,12 @@ BIO = (
 )
 
 PROJECTS = {
+    "proj-declutter.svg": (
+        "AI-driven semantic file organizer — single Go binary, zero runtime dependencies. Scans a directory, "
+        "asks an OpenAI-compatible or local Ollama endpoint how the SHA-256-hashed files should be organized, "
+        "shows an interactive Bubble Tea diff, and only touches disk on confirmation. Every run is logged to a "
+        "JSON history file for full undo."
+    ),
     "proj-videomonitoramento.svg": (
         "Low-cost videomonitoring pipeline for slope movement onset detection. Employs Canny edge detection, "
         "circularity filtering, and a 4px spatial search constraint to track target grids, validated against "

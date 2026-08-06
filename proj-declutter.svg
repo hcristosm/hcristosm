@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="104" viewBox="0 0 620 104">
+  <style>
+    text {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #4a2e18;
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #f2dcb0; }
+    }
+  </style>
+  <text x="2" y="15">AI-driven semantic file organizer — single Go binary, zero runtime</text>
+  <text x="2" y="35">dependencies. Scans a directory, asks an OpenAI-compatible or local Ollama</text>
+  <text x="2" y="55">endpoint how the SHA-256-hashed files should be organized, shows an</text>
+  <text x="2" y="75">interactive Bubble Tea diff, and only touches disk on confirmation. Every run</text>
+  <text x="2" y="95">is logged to a JSON history file for full undo.</text>
+</svg>
