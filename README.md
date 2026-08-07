@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./ascii.svg?v=6" width="460" alt="Mateus Leptokarydis"/>
+<img src="./hero.svg" width="620" alt="Mateus Leptokarydis — geologist turned developer"/>
 
 <img src="./stats.svg" width="620" alt="Contributions in the last year"/>
 
