@@ -32,7 +32,7 @@
 
 **[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; <samp>python, geopandas, leaflet, chart.js, pytest</samp>
 
-<img src="./proj-orca.svg" width="620" alt="Static dashboard cross-referencing CPRM/SGB geological risk sectors with rainfall from INMET, ANA, and Open-Meteo, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. GeoPandas pipeline exports to a static Leaflet + Chart.js site, republished daily via GitHub Actions — no backend, no paid API."/>
+<img src="./proj-orca.svg" width="620"v=2 alt="Static dashboard cross-referencing CPRM/SGB geological risk sectors with rainfall from INMET, ANA, and Open-Meteo, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. GeoPandas pipeline exports to a static Leaflet + Chart.js site, republished daily via GitHub Actions — no backend, no paid API."/>
 
 **[Videomonitoramento-de-encostas](https://github.com/hcristosm/Videomonitoramento-de-encostas)** &nbsp;·&nbsp; <samp>python, opencv, sam2</samp>
 
