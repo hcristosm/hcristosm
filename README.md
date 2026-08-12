@@ -30,7 +30,7 @@
 
 <img src="./proj-declutter.svg" width="620" alt="AI-driven semantic file organizer — single Go binary, zero runtime dependencies. Scans a directory, asks an OpenAI-compatible or local Ollama endpoint how the SHA-256-hashed files should be organized, shows an interactive Bubble Tea diff, and only touches disk on confirmation. Every run is logged to a JSON history file for full undo."/>
 
-**[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; <samp>python, geopandas, leaflet, chart.js, pytest</samp>
+**[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; <samp>python, geopandas, leaflet, chart.js, pytest</samp> &nbsp;·&nbsp; [dashboard ao vivo](https://hcristosm.github.io/ORCA/dashboard/)
 
 <img src="./proj-orca.svg" width="620" alt="Static dashboard cross-referencing CPRM/SGB geological risk sectors with rainfall from INMET, ANA, and Open-Meteo, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. GeoPandas pipeline exports to a static Leaflet + Chart.js site, republished daily via GitHub Actions — no backend, no paid API."/>
 
