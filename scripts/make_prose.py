@@ -93,9 +93,10 @@ PROJECTS = {
         "segmentation and distance transforms to separate touching particles, featuring a CLI and Python API."
     ),
     "proj-orca.svg": (
-        "Local-first dashboard cross-referencing CPRM/SGB geological risk sectors with recent INMET rainfall "
-        "data, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. "
-        "GeoPandas + DuckDB pipeline, no backend or paid API required."
+        "Static dashboard cross-referencing CPRM/SGB geological risk sectors with rainfall from INMET, ANA, and "
+        "Open-Meteo, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. "
+        "GeoPandas pipeline exports to a static Leaflet + Chart.js site, republished daily via GitHub Actions — "
+        "no backend, no paid API."
     ),
 }
 
