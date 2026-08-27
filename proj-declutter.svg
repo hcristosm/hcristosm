@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="104" viewBox="0 0 620 104">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="124" viewBox="0 0 620 124">
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
@@ -10,9 +10,10 @@
       text { fill: #f2dcb0; }
     }
   </style>
-  <text x="2" y="15">AI-driven semantic file organizer — single Go binary, zero runtime</text>
-  <text x="2" y="35">dependencies. Scans a directory, asks an OpenAI-compatible or local Ollama</text>
-  <text x="2" y="55">endpoint how the SHA-256-hashed files should be organized, shows an</text>
-  <text x="2" y="75">interactive Bubble Tea diff, and only touches disk on confirmation. Every run</text>
-  <text x="2" y="95">is logged to a JSON history file for full undo.</text>
+  <text x="2" y="15">Cleans up a messy folder using an LLM. One Go binary, nothing to install</text>
+  <text x="2" y="35">alongside it. It walks the directory, hashes every file with SHA-256, asks an</text>
+  <text x="2" y="55">OpenAI compatible or local Ollama endpoint where things should go, and shows</text>
+  <text x="2" y="75">you the moves in a Bubble Tea diff. Nothing is touched until you say yes, and</text>
+  <text x="2" y="95">there is a dry run if you would rather just look. Every session goes into a</text>
+  <text x="2" y="115">JSON history file, so any run can be undone.</text>
 </svg>

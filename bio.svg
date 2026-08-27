@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="180" viewBox="0 0 620 180">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="158" viewBox="0 0 620 158">
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
@@ -10,12 +10,11 @@
       text { fill: #f2dcb0; }
     }
   </style>
-  <text x="2" y="16">I write Python across the full stack: classical computer vision</text>
-  <text x="2" y="38">pipelines from scratch (OpenCV, Canny, watershed segmentation, distance</text>
-  <text x="2" y="60">transforms), packaged CLI tools with test coverage (pytest, typer), and</text>
-  <text x="2" y="82">small automation systems — like the one rendering this very page, which</text>
-  <text x="2" y="104">pulls GitHub&#x27;s API into hand-built SVGs animated with native SMIL, no</text>
-  <text x="2" y="126">JS. I favor pipelines that are lightweight and validated against ground</text>
-  <text x="2" y="148">truth or zero-shot baselines (SAM 2, DBSCAN) rather than treated as</text>
-  <text x="2" y="170">black boxes.</text>
+  <text x="2" y="16">I write mostly Python. Computer vision pipelines built from scratch with</text>
+  <text x="2" y="38">OpenCV (Canny, watershed, distance transforms), CLI tools that ship with</text>
+  <text x="2" y="60">tests (pytest, typer), and small automation systems. This page is one of</text>
+  <text x="2" y="82">them: it pulls the GitHub API and draws its own SVGs, animated with</text>
+  <text x="2" y="104">plain SMIL, no JavaScript. I like pipelines that stay light and get</text>
+  <text x="2" y="126">checked against ground truth or a zero shot baseline like SAM 2 or</text>
+  <text x="2" y="148">DBSCAN, instead of being trusted blind.</text>
 </svg>

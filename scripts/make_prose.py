@@ -60,52 +60,65 @@ def generate_prose_svg(text, output_path, font_size=14, weight=700, color="text_
 
 
 TAGLINE = (
-    "Geologist turned developer, building computer vision & automation tools for real-world data problems. "
-    "This profile doubles as a running portfolio — pipelines, CLIs, and self-built infra."
+    "Geologist who moved into code. I build computer vision and automation tools for messy real world "
+    "data. This profile is the portfolio itself: pipelines, CLIs, and infra I put together myself."
 )
 
 BIO = (
-    "I write Python across the full stack: classical computer vision pipelines from scratch (OpenCV, Canny, "
-    "watershed segmentation, distance transforms), packaged CLI tools with test coverage (pytest, typer), and "
-    "small automation systems — like the one rendering this very page, which pulls GitHub's API into hand-built "
-    "SVGs animated with native SMIL, no JS. I favor pipelines that are lightweight and validated against ground "
-    "truth or zero-shot baselines (SAM 2, DBSCAN) rather than treated as black boxes."
+    "I write mostly Python. Computer vision pipelines built from scratch with OpenCV (Canny, watershed, "
+    "distance transforms), CLI tools that ship with tests (pytest, typer), and small automation systems. "
+    "This page is one of them: it pulls the GitHub API and draws its own SVGs, animated with plain SMIL, "
+    "no JavaScript. I like pipelines that stay light and get checked against ground truth or a zero shot "
+    "baseline like SAM 2 or DBSCAN, instead of being trusted blind."
 )
 
 COLLAB = (
-    "I build in a pair-programming loop with LLM agents — Claude for design, review and the harder refactors, "
-    "and Cline driving local models (Qwen2.5-Coder and friends via Ollama) for bulk edits that never leave this "
-    "machine. The division of labor is deliberate: I write the specs and the constraints, the agent drafts, and "
-    "nothing lands before I've read the diff and the tests pass. I treat generated code the way I treat a "
-    "zero-shot baseline elsewhere in this profile — useful, fast, and worthless until validated. Every line here "
-    "is code I understand and stand behind."
+    "I code with LLM agents most days. Claude for design, review and the messier refactors, and Cline "
+    "running local models like Qwen2.5-Coder through Ollama for bulk edits that never leave my machine. "
+    "The split is on purpose: I write the spec and the constraints, the agent drafts, and nothing gets "
+    "committed before I read the diff and the tests pass. I treat generated code the same way I treat a "
+    "zero shot baseline anywhere else here. Fast and useful, worth nothing until it is checked. Every "
+    "line in my repos is code I understand and can defend."
 )
 
 PROJECTS = {
     "proj-declutter.svg": (
-        "AI-driven semantic file organizer — single Go binary, zero runtime dependencies. Scans a directory, "
-        "asks an OpenAI-compatible or local Ollama endpoint how the SHA-256-hashed files should be organized, "
-        "shows an interactive Bubble Tea diff, and only touches disk on confirmation. Every run is logged to a "
-        "JSON history file for full undo."
+        "Cleans up a messy folder using an LLM. One Go binary, nothing to install alongside it. It walks "
+        "the directory, hashes every file with SHA-256, asks an OpenAI compatible or local Ollama endpoint "
+        "where things should go, and shows you the moves in a Bubble Tea diff. Nothing is touched until "
+        "you say yes, and there is a dry run if you would rather just look. Every session goes into a JSON "
+        "history file, so any run can be undone."
     ),
     "proj-videomonitoramento.svg": (
-        "Low-cost videomonitoring pipeline for slope movement onset detection. Employs Canny edge detection, "
-        "circularity filtering, and a 4px spatial search constraint to track target grids, validated against "
-        "zero-shot Meta SAM 2 segmentation."
+        "My master's thesis at IG-UNICAMP. The question was whether a cheap camera can catch the moment a "
+        "vegetated slope on the Serra do Mar starts moving. An OpenCV pipeline tracks 40mm targets frame by "
+        "frame on a plain CPU, using Canny edges, a circularity filter and a 4px search lock so targets do "
+        "not get swapped when something blocks the view. Meta SAM 2 goes over the same footage zero shot, "
+        "with DBSCAN grouping the masks, as an independent check. What makes it work in the field is the "
+        "size: 30 minutes of video is 113MB, and the coordinates it boils down to are about 20MB, small "
+        "enough to send over a bad mobile connection."
     ),
     "proj-upscale.svg": (
-        "Local-first CLI for batch image upscaling via Real-ESRGAN, with optional GFPGAN face restoration. "
-        "Runs on GPU/CPU natively or via Docker, using tile-based processing to avoid memory errors on large images."
+        "Batch image upscaling with Real-ESRGAN, running on your own machine. Point it at a file, a folder "
+        "or a zip. GFPGAN face restoration is there if you want it. It finds your GPU on its own and falls "
+        "back to CPU, processes large images in tiles so it does not run out of memory, and copies inputs "
+        "to a temp workspace so the originals are never touched. Docker image included if you would rather "
+        "not install PyTorch."
     ),
     "proj-granulens.svg": (
-        "Automated digital granulometry & Particle Size Distribution (D10, D50, D90) engine. Employs Watershed "
-        "segmentation and distance transforms to separate touching particles, featuring a CLI and Python API."
+        "Measures grains from a photo. Gaussian blur, Otsu threshold, then a distance transform feeds "
+        "Watershed to pull apart particles that are touching. For every grain you get area, equivalent and "
+        "Feret diameters, aspect ratio and sphericity, plus the D10, D50 and D90 for the sample as a whole. "
+        "It writes out a colored overlay, the PSD curve, a CSV per particle and a summary JSON. Runs as a "
+        "CLI or as a Python API."
     ),
     "proj-orca.svg": (
-        "Static dashboard cross-referencing CPRM/SGB geological risk sectors with rainfall from INMET, ANA, and "
-        "Open-Meteo, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. "
-        "GeoPandas pipeline exports to a static Leaflet + Chart.js site, republished daily via GitHub Actions — "
-        "no backend, no paid API."
+        "ORCA pulls the geological risk sectors that CPRM/SGB publishes and checks how much rain actually "
+        "fell on each one. Anything past a rainfall threshold you pick shows up flagged on the map. It "
+        "covers all 27 states off a single shared query grid, sized by binary search so the whole country "
+        "fits in one request budget, and it projects where the alerts are heading 72h out. Rain comes from "
+        "Open-Meteo by default, with INMET and ANA available per state. Each run only fetches what changed. "
+        "174 tests, no backend, nothing paid, rebuilt daily by GitHub Actions."
     ),
 }
 

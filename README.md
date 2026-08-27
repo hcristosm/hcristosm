@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./hero.svg" width="620" alt="Mateus Leptokarydis — geologist turned developer"/>
+<img src="./hero.svg" width="620" alt="Mateus Leptokarydis, geologist turned developer"/>
 
 <img src="./stats.svg" width="620" alt="Contributions in the last year"/>
 
@@ -16,9 +16,9 @@
 
 <img src="./hd-about.svg" width="620" alt="about"/>
 
-<img src="./tagline.svg" width="620" alt="Geologist turned developer, building computer vision & automation tools for real-world data problems. This profile doubles as a running portfolio — pipelines, CLIs, and self-built infra."/><img src="./cursor.svg" width="8" height="16" alt=""/>
+<img src="./tagline.svg" width="620" alt="Geologist who moved into code. I build computer vision and automation tools for messy real world data. This profile is the portfolio itself: pipelines, CLIs, and infra I put together myself."/><img src="./cursor.svg" width="8" height="16" alt=""/>
 
-<img src="./bio.svg" width="620" alt="I write Python across the full stack: classical computer vision pipelines from scratch (OpenCV, Canny, watershed segmentation, distance transforms), packaged CLI tools with test coverage (pytest, typer), and small automation systems — like the one rendering this very page, which pulls GitHub's API into hand-built SVGs animated with native SMIL, no JS. I favor pipelines that are lightweight and validated against ground truth or zero-shot baselines (SAM 2, DBSCAN) rather than treated as black boxes."/>
+<img src="./bio.svg" width="620" alt="I write mostly Python. Computer vision pipelines built from scratch with OpenCV (Canny, watershed, distance transforms), CLI tools that ship with tests (pytest, typer), and small automation systems. This page is one of them: it pulls the GitHub API and draws its own SVGs, animated with plain SMIL, no JavaScript. I like pipelines that stay light and get checked against ground truth or a zero shot baseline like SAM 2 or DBSCAN, instead of being trusted blind."/>
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 
@@ -26,29 +26,29 @@
 
 <img src="./hd-how-i-work.svg" width="620" alt="how i work"/>
 
-<img src="./collab.svg" width="620" alt="I build in a pair-programming loop with LLM agents — Claude for design, review and the harder refactors, and Cline driving local models (Qwen2.5-Coder and friends via Ollama) for bulk edits that never leave this machine. The division of labor is deliberate: I write the specs and the constraints, the agent drafts, and nothing lands before I&#39;ve read the diff and the tests pass. I treat generated code the way I treat a zero-shot baseline elsewhere in this profile — useful, fast, and worthless until validated. Every line here is code I understand and stand behind."/>
+<img src="./collab.svg" width="620" alt="I code with LLM agents most days. Claude for design, review and the messier refactors, and Cline running local models like Qwen2.5-Coder through Ollama for bulk edits that never leave my machine. The split is on purpose: I write the spec and the constraints, the agent drafts, and nothing gets committed before I read the diff and the tests pass. I treat generated code the same way I treat a zero shot baseline anywhere else here. Fast and useful, worth nothing until it is checked. Every line in my repos is code I understand and can defend."/>
 
 <img src="./hd-projects.svg" width="620" alt="projects"/>
 
 **[declutter](https://github.com/hcristosm/declutter)** &nbsp;·&nbsp; <samp>go, cobra, bubbletea</samp>
 
-<img src="./proj-declutter.svg" width="620" alt="AI-driven semantic file organizer — single Go binary, zero runtime dependencies. Scans a directory, asks an OpenAI-compatible or local Ollama endpoint how the SHA-256-hashed files should be organized, shows an interactive Bubble Tea diff, and only touches disk on confirmation. Every run is logged to a JSON history file for full undo."/>
+<img src="./proj-declutter.svg" width="620" alt="Cleans up a messy folder using an LLM. One Go binary, nothing to install alongside it. It walks the directory, hashes every file with SHA-256, asks an OpenAI compatible or local Ollama endpoint where things should go, and shows you the moves in a Bubble Tea diff. Nothing is touched until you say yes, and there is a dry run if you would rather just look. Every session goes into a JSON history file, so any run can be undone."/>
 
-**[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; <samp>python, geopandas, leaflet, chart.js, pytest</samp> &nbsp;·&nbsp; [dashboard ao vivo](https://hcristosm.github.io/ORCA/dashboard/)
+**[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; <samp>python, geopandas, geopackage, leaflet, chart.js, pytest</samp> &nbsp;·&nbsp; [dashboard ao vivo](https://hcristosm.github.io/ORCA/dashboard/)
 
-<img src="./proj-orca.svg" width="620" alt="Static dashboard cross-referencing CPRM/SGB geological risk sectors with rainfall from INMET, ANA, and Open-Meteo, flagging sectors above a configurable accumulated-rainfall threshold on an interactive map. GeoPandas pipeline exports to a static Leaflet + Chart.js site, republished daily via GitHub Actions — no backend, no paid API."/>
+<img src="./proj-orca.svg" width="620" alt="ORCA pulls the geological risk sectors that CPRM/SGB publishes and checks how much rain actually fell on each one. Anything past a rainfall threshold you pick shows up flagged on the map. It covers all 27 states off a single shared query grid, sized by binary search so the whole country fits in one request budget, and it projects where the alerts are heading 72h out. Rain comes from Open-Meteo by default, with INMET and ANA available per state. Each run only fetches what changed. 174 tests, no backend, nothing paid, rebuilt daily by GitHub Actions."/>
 
-**[Videomonitoramento-de-encostas](https://github.com/hcristosm/Videomonitoramento-de-encostas)** &nbsp;·&nbsp; <samp>python, opencv, sam2</samp>
+**[Videomonitoramento-de-encostas](https://github.com/hcristosm/Videomonitoramento-de-encostas)** &nbsp;·&nbsp; <samp>python, opencv, sam2, dbscan</samp>
 
-<img src="./proj-videomonitoramento.svg" width="620" alt="Low-cost videomonitoring pipeline for slope movement onset detection. Employs Canny edge detection, circularity filtering, and a 4px spatial search constraint to track target grids, validated against zero-shot Meta SAM 2 segmentation."/>
+<img src="./proj-videomonitoramento.svg" width="620" alt="My master&#x27;s thesis at IG-UNICAMP. The question was whether a cheap camera can catch the moment a vegetated slope on the Serra do Mar starts moving. An OpenCV pipeline tracks 40mm targets frame by frame on a plain CPU, using Canny edges, a circularity filter and a 4px search lock so targets do not get swapped when something blocks the view. Meta SAM 2 goes over the same footage zero shot, with DBSCAN grouping the masks, as an independent check. What makes it work in the field is the size: 30 minutes of video is 113MB, and the coordinates it boils down to are about 20MB, small enough to send over a bad mobile connection."/>
 
 **[image_batch_upscale](https://github.com/hcristosm/image_batch_upscale)** &nbsp;·&nbsp; <samp>python, real-esrgan, docker</samp>
 
-<img src="./proj-upscale.svg" width="620" alt="Local-first CLI for batch image upscaling via Real-ESRGAN, with optional GFPGAN face restoration. Runs on GPU/CPU natively or via Docker, using tile-based processing to avoid memory errors on large images."/>
+<img src="./proj-upscale.svg" width="620" alt="Batch image upscaling with Real-ESRGAN, running on your own machine. Point it at a file, a folder or a zip. GFPGAN face restoration is there if you want it. It finds your GPU on its own and falls back to CPU, processes large images in tiles so it does not run out of memory, and copies inputs to a temp workspace so the originals are never touched. Docker image included if you would rather not install PyTorch."/>
 
 **[GranuLens](https://github.com/hcristosm/granulens)** &nbsp;·&nbsp; <samp>python, opencv, typer, pytest</samp>
 
-<img src="./proj-granulens.svg" width="620" alt="Automated digital granulometry & Particle Size Distribution (D10, D50, D90) engine. Employs Watershed segmentation and distance transforms to separate touching particles, featuring a CLI and Python API."/>
+<img src="./proj-granulens.svg" width="620" alt="Measures grains from a photo. Gaussian blur, Otsu threshold, then a distance transform feeds Watershed to pull apart particles that are touching. For every grain you get area, equivalent and Feret diameters, aspect ratio and sphericity, plus the D10, D50 and D90 for the sample as a whole. It writes out a colored overlay, the PSD curve, a CSV per particle and a summary JSON. Runs as a CLI or as a Python API."/>
 
 <img src="./hd-stats.svg" width="620" alt="stats"/>
 
@@ -63,17 +63,17 @@
 
 <img src="./hd-about-this-page.svg" width="620" alt="about this page"/>
 
-Every graphic on this page is self-contained and rendered directly in the repository—no third-party servers, tracking scripts, or external app wrappers, with one exception: the profile-views badge, which needs to update on every page load and so can't be a static file committed by a daily Action.
+Every graphic here is built and stored in this repo. No third party servers, no tracking scripts, no external app wrappers. The one exception is the profile views badge, which has to update on every page load, so it can't be a static file committed once a day by an Action.
 
-* **Design system**: A vintage-cassette palette—warm browns, amber (paper print in light mode, phosphor-CRT amber in dark mode), and a pastel rainbow accent lifted from 70s/80s tape labels—shared by every generator via [`scripts/palette.py`](scripts/palette.py), so the whole page reads as one object instead of a stack of loose images.
-* **`ascii.svg`**: Built via [`scripts/make_portrait.py`](scripts/make_portrait.py), pushing character density matrices into an SVG framed like a cassette window (vignette, rainbow spine). It animates line-by-line using native SMIL (`<set>` elements), bypassing GitHub's JavaScript stripping.
-* **Section headers (`hd-*.svg`)**: Generated by [`scripts/make_headers.py`](scripts/make_headers.py) as terminal-prompt labels (`» whoami`, `» cat stack.txt`, …) on a tape-label chip, trailing off into a dotted sprocket track.
-* **`stack.svg`**: Generated by [`scripts/make_stack.py`](scripts/make_stack.py); the tech list rendered as pills instead of plain text, each tagged with a rotating accent dot.
-* **Prose (`tagline.svg`, `bio.svg`, `proj-*.svg`)**: GitHub's markdown sanitizer strips `style` attributes, so plain text can't be recolored inline. [`scripts/make_prose.py`](scripts/make_prose.py) renders the link-free running text as bold, palette-colored SVG instead—project links themselves stay as real markdown anchors.
-* **Telemetry Graphics (`stats.svg`, `streak.svg`, `langs.svg`)**: Custom Python scripts ([`make_stats.py`](scripts/make_stats.py), [`make_streak.py`](scripts/make_streak.py), [`make_langs.py`](scripts/make_langs.py)) query GitHub's GraphQL API to compute contribution streaks, commit counts, and language distribution. Language logos ([`lang_icons.py`](scripts/lang_icons.py)) are vendored at build time from [Simple Icons](https://simpleicons.org) (CC0) and embedded directly as path data—no runtime calls to any icon CDN.
-* **Contact icons (`social-*.svg`)**: Generated by [`scripts/make_social.py`](scripts/make_social.py) as small vintage-panel chips wrapped in real markdown links—GitHub, LinkedIn and ORCID use vendored Simple Icons brand marks, email and Lattes use generic stroke glyphs.
-* **Profile views badge**: The only non-self-hosted graphic on the page—a [komarev.com](https://komarev.com/ghpvc/) badge, since a live per-view counter needs a server that runs on every image request, which a static SVG committed by a daily Action can't do.
-* **`cursor.svg`**: A single blinking block cursor (SMIL opacity keyframes) capping the tagline, like a terminal waiting for input.
-* **Automation**: Managed by a scheduled GitHub Action ([`.github/workflows/stats.yml`](.github/workflows/stats.yml)) running daily at midnight UTC, committing changes only when stats actually update.
-* **AI pair-programming**: This page is itself an example of the workflow described above—the generator scripts were written alongside Claude and Cline-driven local models, then read, adjusted, and committed by hand. `collab.svg` is generated by the same [`scripts/make_prose.py`](scripts/make_prose.py) as the rest of the running text.
-* **Typography**: Everything uses the system monospace stack (`ui-monospace`, `SF Mono`, `Menlo`, `Consolas`, …)—no embedded webfont, so there's nothing for GitHub's sanitizer to strip.
+* **Design system**: A vintage cassette palette. Warm browns, amber (paper print in light mode, phosphor CRT amber in dark mode), and a pastel rainbow accent taken from 70s and 80s tape labels. Every generator reads it from [`scripts/palette.py`](scripts/palette.py), so the page looks like one object instead of a pile of loose images.
+* **`ascii.svg`**: Built by [`scripts/make_portrait.py`](scripts/make_portrait.py), which turns character density matrices into an SVG framed like a cassette window, with a vignette and a rainbow spine. It draws itself line by line with plain SMIL (`<set>` elements), since GitHub strips JavaScript.
+* **Section headers (`hd-*.svg`)**: [`scripts/make_headers.py`](scripts/make_headers.py) writes them as terminal prompts (`» whoami`, `» cat stack.txt`, …) sitting on a tape label chip, trailing off into a dotted sprocket track.
+* **`stack.svg`**: From [`scripts/make_stack.py`](scripts/make_stack.py). The tech list as pills instead of plain text, each with an accent dot that rotates through the palette.
+* **Prose (`tagline.svg`, `bio.svg`, `collab.svg`, `proj-*.svg`)**: GitHub's markdown sanitizer drops `style` attributes, so there is no way to color plain text inline. [`scripts/make_prose.py`](scripts/make_prose.py) draws the running text as bold SVG in the palette instead. Project links stay as real markdown anchors.
+* **Telemetry (`stats.svg`, `streak.svg`, `langs.svg`)**: [`make_stats.py`](scripts/make_stats.py), [`make_streak.py`](scripts/make_streak.py) and [`make_langs.py`](scripts/make_langs.py) hit GitHub's GraphQL API for contribution streaks, commit counts and language distribution. The language logos ([`lang_icons.py`](scripts/lang_icons.py)) are pulled from [Simple Icons](https://simpleicons.org) (CC0) at build time and baked in as path data, so nothing calls an icon CDN at load.
+* **Contact icons (`social-*.svg`)**: [`scripts/make_social.py`](scripts/make_social.py) builds small vintage panel chips wrapped in real markdown links. GitHub, LinkedIn and ORCID use vendored Simple Icons marks; email and Lattes use generic stroke glyphs.
+* **Profile views badge**: The only graphic not hosted here, a [komarev.com](https://komarev.com/ghpvc/) badge. A live per view counter needs a server running on every image request, which a static SVG committed once a day can't do.
+* **`cursor.svg`**: One blinking block cursor (SMIL opacity keyframes) at the end of the tagline, like a terminal waiting for input.
+* **Automation**: A scheduled GitHub Action ([`.github/workflows/stats.yml`](.github/workflows/stats.yml)) runs daily at midnight UTC and only commits when the stats actually changed.
+* **AI pair-programming**: This page is an example of the workflow above. The generator scripts were written with Claude and with Cline running local models, then read, adjusted and committed by hand. `collab.svg` comes out of the same [`scripts/make_prose.py`](scripts/make_prose.py) as the rest of the text here.
+* **Typography**: System monospace stack (`ui-monospace`, `SF Mono`, `Menlo`, `Consolas`, …). No webfont, so there is nothing for GitHub's sanitizer to strip.

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="202" viewBox="0 0 620 202">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="180" viewBox="0 0 620 180">
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
@@ -10,13 +10,12 @@
       text { fill: #f2dcb0; }
     }
   </style>
-  <text x="2" y="16">I build in a pair-programming loop with LLM agents — Claude for design,</text>
-  <text x="2" y="38">review and the harder refactors, and Cline driving local models</text>
-  <text x="2" y="60">(Qwen2.5-Coder and friends via Ollama) for bulk edits that never leave</text>
-  <text x="2" y="82">this machine. The division of labor is deliberate: I write the specs and</text>
-  <text x="2" y="104">the constraints, the agent drafts, and nothing lands before I&#x27;ve read</text>
-  <text x="2" y="126">the diff and the tests pass. I treat generated code the way I treat a</text>
-  <text x="2" y="148">zero-shot baseline elsewhere in this profile — useful, fast, and</text>
-  <text x="2" y="170">worthless until validated. Every line here is code I understand and</text>
-  <text x="2" y="192">stand behind.</text>
+  <text x="2" y="16">I code with LLM agents most days. Claude for design, review and the</text>
+  <text x="2" y="38">messier refactors, and Cline running local models like Qwen2.5-Coder</text>
+  <text x="2" y="60">through Ollama for bulk edits that never leave my machine. The split is</text>
+  <text x="2" y="82">on purpose: I write the spec and the constraints, the agent drafts, and</text>
+  <text x="2" y="104">nothing gets committed before I read the diff and the tests pass. I</text>
+  <text x="2" y="126">treat generated code the same way I treat a zero shot baseline anywhere</text>
+  <text x="2" y="148">else here. Fast and useful, worth nothing until it is checked. Every</text>
+  <text x="2" y="170">line in my repos is code I understand and can defend.</text>
 </svg>

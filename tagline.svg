@@ -10,8 +10,8 @@
       text { fill: #ffb347; }
     }
   </style>
-  <text x="2" y="18">Geologist turned developer, building computer vision &amp;</text>
-  <text x="2" y="44">automation tools for real-world data problems. This profile</text>
-  <text x="2" y="70">doubles as a running portfolio — pipelines, CLIs, and</text>
-  <text x="2" y="96">self-built infra.</text>
+  <text x="2" y="18">Geologist who moved into code. I build computer vision and</text>
+  <text x="2" y="44">automation tools for messy real world data. This profile is the</text>
+  <text x="2" y="70">portfolio itself: pipelines, CLIs, and infra I put together</text>
+  <text x="2" y="96">myself.</text>
 </svg>

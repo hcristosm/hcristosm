@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="104" viewBox="0 0 620 104">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="164" viewBox="0 0 620 164">
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
@@ -10,9 +10,12 @@
       text { fill: #f2dcb0; }
     }
   </style>
-  <text x="2" y="15">Static dashboard cross-referencing CPRM/SGB geological risk sectors with</text>
-  <text x="2" y="35">rainfall from INMET, ANA, and Open-Meteo, flagging sectors above a</text>
-  <text x="2" y="55">configurable accumulated-rainfall threshold on an interactive map. GeoPandas</text>
-  <text x="2" y="75">pipeline exports to a static Leaflet + Chart.js site, republished daily via</text>
-  <text x="2" y="95">GitHub Actions — no backend, no paid API.</text>
+  <text x="2" y="15">ORCA pulls the geological risk sectors that CPRM/SGB publishes and checks how</text>
+  <text x="2" y="35">much rain actually fell on each one. Anything past a rainfall threshold you</text>
+  <text x="2" y="55">pick shows up flagged on the map. It covers all 27 states off a single shared</text>
+  <text x="2" y="75">query grid, sized by binary search so the whole country fits in one request</text>
+  <text x="2" y="95">budget, and it projects where the alerts are heading 72h out. Rain comes from</text>
+  <text x="2" y="115">Open-Meteo by default, with INMET and ANA available per state. Each run only</text>
+  <text x="2" y="135">fetches what changed. 174 tests, no backend, nothing paid, rebuilt daily by</text>
+  <text x="2" y="155">GitHub Actions.</text>
 </svg>
