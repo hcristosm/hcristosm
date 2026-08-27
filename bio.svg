@@ -10,11 +10,11 @@
       text { fill: #f2dcb0; }
     }
   </style>
-  <text x="2" y="16">I write mostly Python. Computer vision pipelines built from scratch with</text>
-  <text x="2" y="38">OpenCV (Canny, watershed, distance transforms), CLI tools that ship with</text>
-  <text x="2" y="60">tests (pytest, typer), and small automation systems. This page is one of</text>
-  <text x="2" y="82">them: it pulls the GitHub API and draws its own SVGs, animated with</text>
-  <text x="2" y="104">plain SMIL, no JavaScript. I like pipelines that stay light and get</text>
-  <text x="2" y="126">checked against ground truth or a zero shot baseline like SAM 2 or</text>
-  <text x="2" y="148">DBSCAN, instead of being trusted blind.</text>
+  <text x="2" y="16">I write mostly Python. Computer vision with OpenCV (Canny, watershed,</text>
+  <text x="2" y="38">distance transforms), small CLI tools I try to keep tested (pytest,</text>
+  <text x="2" y="60">typer), and bits of automation. This page is one of them: it pulls the</text>
+  <text x="2" y="82">GitHub API and draws its own SVGs with plain SMIL, no JavaScript. I try</text>
+  <text x="2" y="104">to check what I build against ground truth or a zero shot baseline like</text>
+  <text x="2" y="126">SAM 2 or DBSCAN, mostly because I do not trust my own results until</text>
+  <text x="2" y="148">something else agrees with them. Still learning a lot of this as I go.</text>
 </svg>

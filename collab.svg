@@ -11,11 +11,11 @@
     }
   </style>
   <text x="2" y="16">I code with LLM agents most days. Claude for design, review and the</text>
-  <text x="2" y="38">messier refactors, and Cline running local models like Qwen2.5-Coder</text>
-  <text x="2" y="60">through Ollama for bulk edits that never leave my machine. The split is</text>
-  <text x="2" y="82">on purpose: I write the spec and the constraints, the agent drafts, and</text>
-  <text x="2" y="104">nothing gets committed before I read the diff and the tests pass. I</text>
-  <text x="2" y="126">treat generated code the same way I treat a zero shot baseline anywhere</text>
-  <text x="2" y="148">else here. Fast and useful, worth nothing until it is checked. Every</text>
-  <text x="2" y="170">line in my repos is code I understand and can defend.</text>
+  <text x="2" y="38">refactors I would struggle with alone, and Cline running local models</text>
+  <text x="2" y="60">like Qwen2.5-Coder through Ollama for the repetitive edits. I write the</text>
+  <text x="2" y="82">spec and the constraints, the agent drafts, and I read the diff and run</text>
+  <text x="2" y="104">the tests before anything gets committed. I still get things wrong this</text>
+  <text x="2" y="126">way. I am putting it here because I would rather tell you how the code</text>
+  <text x="2" y="148">got written than have you assume, and because if something in these</text>
+  <text x="2" y="170">repos is broken, it is on me either way.</text>
 </svg>

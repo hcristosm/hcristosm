@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="164" viewBox="0 0 620 164">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="184" viewBox="0 0 620 184">
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
@@ -11,11 +11,12 @@
     }
   </style>
   <text x="2" y="15">ORCA pulls the geological risk sectors that CPRM/SGB publishes and checks how</text>
-  <text x="2" y="35">much rain actually fell on each one. Anything past a rainfall threshold you</text>
-  <text x="2" y="55">pick shows up flagged on the map. It covers all 27 states off a single shared</text>
-  <text x="2" y="75">query grid, sized by binary search so the whole country fits in one request</text>
-  <text x="2" y="95">budget, and it projects where the alerts are heading 72h out. Rain comes from</text>
-  <text x="2" y="115">Open-Meteo by default, with INMET and ANA available per state. Each run only</text>
-  <text x="2" y="135">fetches what changed. 174 tests, no backend, nothing paid, rebuilt daily by</text>
-  <text x="2" y="155">GitHub Actions.</text>
+  <text x="2" y="35">much rain fell on each one, flagging anything past a threshold you pick. It</text>
+  <text x="2" y="55">covers all 27 states off a single shared query grid, sized by binary search so</text>
+  <text x="2" y="75">the whole country fits in one request budget, and it sketches where the alerts</text>
+  <text x="2" y="95">are heading 72h out. Rain comes from Open-Meteo by default, with INMET and ANA</text>
+  <text x="2" y="115">per state. Each run only fetches what changed. The 100mm default is a common</text>
+  <text x="2" y="135">number from the literature, not an official calibrated one, and station</text>
+  <text x="2" y="155">coverage is thin in a lot of places. It is a side project built on public</text>
+  <text x="2" y="175">data, not a warning system anyone should rely on.</text>
 </svg>

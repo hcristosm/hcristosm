@@ -60,65 +60,66 @@ def generate_prose_svg(text, output_path, font_size=14, weight=700, color="text_
 
 
 TAGLINE = (
-    "Geologist who moved into code. I build computer vision and automation tools for messy real world "
-    "data. This profile is the portfolio itself: pipelines, CLIs, and infra I put together myself."
+    "Geologist who got curious about code. I build small computer vision and automation tools, mostly to "
+    "solve problems I ran into myself. This profile is where I keep them."
 )
 
 BIO = (
-    "I write mostly Python. Computer vision pipelines built from scratch with OpenCV (Canny, watershed, "
-    "distance transforms), CLI tools that ship with tests (pytest, typer), and small automation systems. "
-    "This page is one of them: it pulls the GitHub API and draws its own SVGs, animated with plain SMIL, "
-    "no JavaScript. I like pipelines that stay light and get checked against ground truth or a zero shot "
-    "baseline like SAM 2 or DBSCAN, instead of being trusted blind."
+    "I write mostly Python. Computer vision with OpenCV (Canny, watershed, distance transforms), small CLI "
+    "tools I try to keep tested (pytest, typer), and bits of automation. This page is one of them: it pulls "
+    "the GitHub API and draws its own SVGs with plain SMIL, no JavaScript. I try to check what I build "
+    "against ground truth or a zero shot baseline like SAM 2 or DBSCAN, mostly because I do not trust my "
+    "own results until something else agrees with them. Still learning a lot of this as I go."
 )
 
 COLLAB = (
-    "I code with LLM agents most days. Claude for design, review and the messier refactors, and Cline "
-    "running local models like Qwen2.5-Coder through Ollama for bulk edits that never leave my machine. "
-    "The split is on purpose: I write the spec and the constraints, the agent drafts, and nothing gets "
-    "committed before I read the diff and the tests pass. I treat generated code the same way I treat a "
-    "zero shot baseline anywhere else here. Fast and useful, worth nothing until it is checked. Every "
-    "line in my repos is code I understand and can defend."
+    "I code with LLM agents most days. Claude for design, review and the refactors I would struggle with "
+    "alone, and Cline running local models like Qwen2.5-Coder through Ollama for the repetitive edits. I "
+    "write the spec and the constraints, the agent drafts, and I read the diff and run the tests before "
+    "anything gets committed. I still get things wrong this way. I am putting it here because I would "
+    "rather tell you how the code got written than have you assume, and because if something in these "
+    "repos is broken, it is on me either way."
 )
 
 PROJECTS = {
     "proj-declutter.svg": (
-        "Cleans up a messy folder using an LLM. One Go binary, nothing to install alongside it. It walks "
-        "the directory, hashes every file with SHA-256, asks an OpenAI compatible or local Ollama endpoint "
-        "where things should go, and shows you the moves in a Bubble Tea diff. Nothing is touched until "
-        "you say yes, and there is a dry run if you would rather just look. Every session goes into a JSON "
-        "history file, so any run can be undone."
+        "Cleans up a messy folder using an LLM. It started as a fix for my own downloads folder. One Go "
+        "binary, nothing to install alongside it. It walks the directory, hashes every file with SHA-256, "
+        "asks an OpenAI compatible or local Ollama endpoint where things should go, and shows you the moves "
+        "in a Bubble Tea diff. Nothing is touched until you say yes, there is a dry run if you would rather "
+        "just look, and every session goes into a JSON history file so any run can be undone."
     ),
     "proj-videomonitoramento.svg": (
         "My master's thesis at IG-UNICAMP. The question was whether a cheap camera can catch the moment a "
         "vegetated slope on the Serra do Mar starts moving. An OpenCV pipeline tracks 40mm targets frame by "
         "frame on a plain CPU, using Canny edges, a circularity filter and a 4px search lock so targets do "
-        "not get swapped when something blocks the view. Meta SAM 2 goes over the same footage zero shot, "
-        "with DBSCAN grouping the masks, as an independent check. What makes it work in the field is the "
-        "size: 30 minutes of video is 113MB, and the coordinates it boils down to are about 20MB, small "
-        "enough to send over a bad mobile connection."
+        "not get swapped when something blocks the view. I ran Meta SAM 2 zero shot over the same footage, "
+        "with DBSCAN grouping the masks, because I wanted a second opinion that was not mine. The size is "
+        "what makes it plausible in the field: 30 minutes of video is 113MB, the coordinates it comes down "
+        "to are about 20MB. One site and a limited set of runs, so it argues for feasibility, not much more."
     ),
     "proj-upscale.svg": (
-        "Batch image upscaling with Real-ESRGAN, running on your own machine. Point it at a file, a folder "
-        "or a zip. GFPGAN face restoration is there if you want it. It finds your GPU on its own and falls "
-        "back to CPU, processes large images in tiles so it does not run out of memory, and copies inputs "
-        "to a temp workspace so the originals are never touched. Docker image included if you would rather "
-        "not install PyTorch."
+        "Batch image upscaling with Real-ESRGAN on your own machine. Point it at a file, a folder or a zip. "
+        "GFPGAN face restoration if you want it. It looks for your GPU and falls back to CPU, works through "
+        "large images in tiles so it does not run out of memory, and copies inputs to a temp workspace so "
+        "the originals are never touched. There is a Docker image if you would rather not install PyTorch. "
+        "It was a Colab notebook first and the rewrite has not been tested everywhere yet."
     ),
     "proj-granulens.svg": (
         "Measures grains from a photo. Gaussian blur, Otsu threshold, then a distance transform feeds "
         "Watershed to pull apart particles that are touching. For every grain you get area, equivalent and "
-        "Feret diameters, aspect ratio and sphericity, plus the D10, D50 and D90 for the sample as a whole. "
-        "It writes out a colored overlay, the PSD curve, a CSV per particle and a summary JSON. Runs as a "
-        "CLI or as a Python API."
+        "Feret diameters, aspect ratio and sphericity, plus the D10, D50 and D90 for the sample. It writes "
+        "out a colored overlay, the PSD curve, a CSV per particle and a summary JSON. Runs as a CLI or as a "
+        "Python API. It is classical computer vision, so it wants reasonably lit, reasonably separated grains."
     ),
     "proj-orca.svg": (
-        "ORCA pulls the geological risk sectors that CPRM/SGB publishes and checks how much rain actually "
-        "fell on each one. Anything past a rainfall threshold you pick shows up flagged on the map. It "
-        "covers all 27 states off a single shared query grid, sized by binary search so the whole country "
-        "fits in one request budget, and it projects where the alerts are heading 72h out. Rain comes from "
-        "Open-Meteo by default, with INMET and ANA available per state. Each run only fetches what changed. "
-        "174 tests, no backend, nothing paid, rebuilt daily by GitHub Actions."
+        "ORCA pulls the geological risk sectors that CPRM/SGB publishes and checks how much rain fell on "
+        "each one, flagging anything past a threshold you pick. It covers all 27 states off a single shared "
+        "query grid, sized by binary search so the whole country fits in one request budget, and it sketches "
+        "where the alerts are heading 72h out. Rain comes from Open-Meteo by default, with INMET and ANA per "
+        "state. Each run only fetches what changed. The 100mm default is a common number from the "
+        "literature, not an official calibrated one, and station coverage is thin in a lot of places. It is "
+        "a side project built on public data, not a warning system anyone should rely on."
     ),
 }
 

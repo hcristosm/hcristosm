@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="108" viewBox="0 0 620 108">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="82" viewBox="0 0 620 82">
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
@@ -10,8 +10,7 @@
       text { fill: #ffb347; }
     }
   </style>
-  <text x="2" y="18">Geologist who moved into code. I build computer vision and</text>
-  <text x="2" y="44">automation tools for messy real world data. This profile is the</text>
-  <text x="2" y="70">portfolio itself: pipelines, CLIs, and infra I put together</text>
-  <text x="2" y="96">myself.</text>
+  <text x="2" y="18">Geologist who got curious about code. I build small computer</text>
+  <text x="2" y="44">vision and automation tools, mostly to solve problems I ran</text>
+  <text x="2" y="70">into myself. This profile is where I keep them.</text>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="124" viewBox="0 0 620 124">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="144" viewBox="0 0 620 144">
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
@@ -10,10 +10,11 @@
       text { fill: #f2dcb0; }
     }
   </style>
-  <text x="2" y="15">Batch image upscaling with Real-ESRGAN, running on your own machine. Point it</text>
-  <text x="2" y="35">at a file, a folder or a zip. GFPGAN face restoration is there if you want it.</text>
-  <text x="2" y="55">It finds your GPU on its own and falls back to CPU, processes large images in</text>
-  <text x="2" y="75">tiles so it does not run out of memory, and copies inputs to a temp workspace</text>
-  <text x="2" y="95">so the originals are never touched. Docker image included if you would rather</text>
-  <text x="2" y="115">not install PyTorch.</text>
+  <text x="2" y="15">Batch image upscaling with Real-ESRGAN on your own machine. Point it at a</text>
+  <text x="2" y="35">file, a folder or a zip. GFPGAN face restoration if you want it. It looks for</text>
+  <text x="2" y="55">your GPU and falls back to CPU, works through large images in tiles so it does</text>
+  <text x="2" y="75">not run out of memory, and copies inputs to a temp workspace so the originals</text>
+  <text x="2" y="95">are never touched. There is a Docker image if you would rather not install</text>
+  <text x="2" y="115">PyTorch. It was a Colab notebook first and the rewrite has not been tested</text>
+  <text x="2" y="135">everywhere yet.</text>
 </svg>
