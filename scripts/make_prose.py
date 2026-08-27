@@ -72,6 +72,15 @@ BIO = (
     "truth or zero-shot baselines (SAM 2, DBSCAN) rather than treated as black boxes."
 )
 
+COLLAB = (
+    "I build in a pair-programming loop with LLM agents — Claude for design, review and the harder refactors, "
+    "and Cline driving local models (Qwen2.5-Coder and friends via Ollama) for bulk edits that never leave this "
+    "machine. The division of labor is deliberate: I write the specs and the constraints, the agent drafts, and "
+    "nothing lands before I've read the diff and the tests pass. I treat generated code the way I treat a "
+    "zero-shot baseline elsewhere in this profile — useful, fast, and worthless until validated. Every line here "
+    "is code I understand and stand behind."
+)
+
 PROJECTS = {
     "proj-declutter.svg": (
         "AI-driven semantic file organizer — single Go binary, zero runtime dependencies. Scans a directory, "
@@ -104,5 +113,6 @@ PROJECTS = {
 if __name__ == "__main__":
     generate_prose_svg(TAGLINE, "tagline.svg", font_size=16, weight=700, color="accent", line_height=26)
     generate_prose_svg(BIO, "bio.svg", font_size=14, weight=600, color="text_primary")
+    generate_prose_svg(COLLAB, "collab.svg", font_size=14, weight=600, color="text_primary")
     for filename, text in PROJECTS.items():
         generate_prose_svg(text, filename, font_size=13, weight=600, color="text_primary", line_height=20)
