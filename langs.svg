@@ -64,7 +64,7 @@
   </g>
   <text x="42" y="78" class="label">jupyter notebook</text>
   <rect x="160" y="69" width="80" height="8" class="bar-bg"/>
-  <rect x="160" y="69" width="19" height="8" class="bar-fill"/>
+  <rect x="160" y="69" width="20" height="8" class="bar-fill"/>
   <text x="250" y="78" class="value">25%</text>
   <g class="lang-icon">
     <rect x="20" y="86" width="18" height="18" rx="4" class="tile"/>
