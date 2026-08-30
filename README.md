@@ -42,11 +42,7 @@
 
 <img src="./proj-videomonitoramento.svg" width="620" alt="My master&#x27;s thesis at IG-UNICAMP. The question was whether a cheap camera can catch the moment a vegetated slope on the Serra do Mar starts moving. An OpenCV pipeline tracks 40mm targets frame by frame on a plain CPU, using Canny edges, a circularity filter and a 4px search lock so targets do not get swapped when something blocks the view. I ran Meta SAM 2 zero shot over the same footage, with DBSCAN grouping the masks, because I wanted a second opinion that was not mine. The size is what makes it plausible in the field: 30 minutes of video is 113MB, the coordinates it comes down to are about 20MB. One site and a limited set of runs, so it argues for feasibility, not much more."/>
 
-**[image_batch_upscale](https://github.com/hcristosm/image_batch_upscale)** &nbsp;·&nbsp; <samp>python, real-esrgan, docker</samp>
-
-<img src="./proj-upscale.svg" width="620" alt="Batch image upscaling with Real-ESRGAN on your own machine. Point it at a file, a folder or a zip. GFPGAN face restoration if you want it. It looks for your GPU and falls back to CPU, works through large images in tiles so it does not run out of memory, and copies inputs to a temp workspace so the originals are never touched. There is a Docker image if you would rather not install PyTorch. It was a Colab notebook first and the rewrite has not been tested everywhere yet."/>
-
-**[GranuLens](https://github.com/hcristosm/granulens)** &nbsp;·&nbsp; <samp>python, opencv, typer, pytest</samp>
+**[GranuLens](https://github.com/hcristosm/granulens)** &nbsp;·&nbsp; <samp>python, opencv, typer, pytest</samp> &nbsp;·&nbsp; <samp>archived</samp>
 
 <img src="./proj-granulens.svg" width="620" alt="Measures grains from a photo. Gaussian blur, Otsu threshold, then a distance transform feeds Watershed to pull apart particles that are touching. For every grain you get area, equivalent and Feret diameters, aspect ratio and sphericity, plus the D10, D50 and D90 for the sample. It writes out a colored overlay, the PSD curve, a CSV per particle and a summary JSON. Runs as a CLI or as a Python API. It is classical computer vision, so it wants reasonably lit, reasonably separated grains."/>
 

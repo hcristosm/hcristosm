@@ -98,13 +98,6 @@ PROJECTS = {
         "what makes it plausible in the field: 30 minutes of video is 113MB, the coordinates it comes down "
         "to are about 20MB. One site and a limited set of runs, so it argues for feasibility, not much more."
     ),
-    "proj-upscale.svg": (
-        "Batch image upscaling with Real-ESRGAN on your own machine. Point it at a file, a folder or a zip. "
-        "GFPGAN face restoration if you want it. It looks for your GPU and falls back to CPU, works through "
-        "large images in tiles so it does not run out of memory, and copies inputs to a temp workspace so "
-        "the originals are never touched. There is a Docker image if you would rather not install PyTorch. "
-        "It was a Colab notebook first and the rewrite has not been tested everywhere yet."
-    ),
     "proj-granulens.svg": (
         "Measures grains from a photo. Gaussian blur, Otsu threshold, then a distance transform feeds "
         "Watershed to pull apart particles that are touching. For every grain you get area, equivalent and "
