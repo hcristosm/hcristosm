@@ -56,16 +56,16 @@
   </g>
   <text x="42" y="56" class="label">python</text>
   <rect x="160" y="47" width="80" height="8" class="bar-bg"/>
-  <rect x="160" y="47" width="52" height="8" class="bar-fill"/>
-  <text x="250" y="56" class="value">66%</text>
+  <rect x="160" y="47" width="48" height="8" class="bar-fill"/>
+  <text x="250" y="56" class="value">61%</text>
   <g class="lang-icon">
     <rect x="20" y="64" width="18" height="18" rx="4" class="tile"/>
     <g transform="translate(22.5,66.5) scale(0.5416666666666666)" fill="#F37626"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"/></g>
   </g>
   <text x="42" y="78" class="label">jupyter notebook</text>
   <rect x="160" y="69" width="80" height="8" class="bar-bg"/>
-  <rect x="160" y="69" width="18" height="8" class="bar-fill"/>
-  <text x="250" y="78" class="value">23%</text>
+  <rect x="160" y="69" width="21" height="8" class="bar-fill"/>
+  <text x="250" y="78" class="value">27%</text>
   <g class="lang-icon">
     <rect x="20" y="86" width="18" height="18" rx="4" fill="#6e7681" opacity="0.85"/>
     <text x="29.0" y="98.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace" font-size="7" font-weight="700" fill="#ffffff">QM</text>
@@ -89,7 +89,7 @@
   <text x="42" y="144" class="label">shell</text>
   <rect x="160" y="135" width="80" height="8" class="bar-bg"/>
   <rect x="160" y="135" width="4" height="8" class="bar-fill"/>
-  <text x="250" y="144" class="value">1%</text>
+  <text x="250" y="144" class="value">2%</text>
 
   <!-- COLUNA 2: BY REPOS -->
   <text x="310" y="34" class="header">BY REPOS</text>
@@ -126,10 +126,10 @@
   <rect x="450" y="113" width="20" height="8" class="bar-fill"/>
   <text x="540" y="122" class="value">1</text>
   <g class="lang-icon">
-    <rect x="310" y="130" width="18" height="18" rx="4" fill="#6e7681" opacity="0.85"/>
-    <text x="319.0" y="142.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace" font-size="7" font-weight="700" fill="#ffffff">QM</text>
+    <rect x="310" y="130" width="18" height="18" rx="4" class="tile"/>
+    <g transform="translate(312.5,132.5) scale(0.5416666666666666)" fill="#F7DF1E"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></g>
   </g>
-  <text x="332" y="144" class="label">qml</text>
+  <text x="332" y="144" class="label">javascript</text>
   <rect x="450" y="135" width="80" height="8" class="bar-bg"/>
   <rect x="450" y="135" width="20" height="8" class="bar-fill"/>
   <text x="540" y="144" class="value">1</text>
