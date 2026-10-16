@@ -67,7 +67,8 @@ TAGLINE = (
 BIO = (
     "I write mostly Python. Computer vision with OpenCV (Canny, watershed, distance transforms), small CLI "
     "tools I try to keep tested (pytest, typer), and bits of automation. This page is one of them: it pulls "
-    "the GitHub API and draws its own SVGs with plain SMIL, no JavaScript. I try to check what I build "
+    "the GitHub API and draws its own SVGs with plain SMIL, no JavaScript. Lately also some reverse "
+    "engineering, reading a vendor's Windows tool so my keyboard works on Linux. I try to check what I build "
     "against ground truth or a zero shot baseline like SAM 2 or DBSCAN, mostly because I do not trust my "
     "own results until something else agrees with them. Still learning a lot of this as I go."
 )
@@ -106,13 +107,33 @@ PROJECTS = {
         "Python API. It is classical computer vision, so it wants reasonably lit, reasonably separated grains."
     ),
     "proj-orca.svg": (
-        "ORCA pulls the geological risk sectors that CPRM/SGB publishes and checks how much rain fell on "
-        "each one, flagging anything past a threshold you pick. It covers all 27 states off a single shared "
-        "query grid, sized by binary search so the whole country fits in one request budget, and it sketches "
-        "where the alerts are heading 72h out. Rain comes from Open-Meteo by default, with INMET and ANA per "
-        "state. Each run only fetches what changed. The 100mm default is a common number from the "
-        "literature, not an official calibrated one, and station coverage is thin in a lot of places. It is "
-        "a side project built on public data, not a warning system anyone should rely on."
+        "ORCA pulls the geological risk sectors that CPRM/SGB publishes for all 27 states and crosses each "
+        "one with the rain that fell on it, flagging anything past a threshold you drag along a ruler. Rain "
+        "is hourly Open-Meteo per coordinate, off one national query grid sized by binary search so the "
+        "whole country fits in the free daily request budget, and it sketches where alerts are heading 72h "
+        "out. The dashboard is static HTML and JS on GitHub Pages, rebuilt every day: risk grade drawn as "
+        "hatching like a geological map, live INMET warnings, radar and lightning layers, CSV and PDF "
+        "export, and you can drop in your own area (GeoJSON, KML or shapefile) without it leaving the "
+        "browser. Rain is modeled, not gauged, and the 100mm default comes from the literature, not an "
+        "official calibration. A side project on public data, not a warning system anyone should rely on."
+    ),
+    "proj-ak820.svg": (
+        "My keyboard, an AJAZZ AK820 Pro, only ships with a Windows configurator, so I took that apart to "
+        "get it working on Linux. The HID protocol came out of the vendor's DeviceDriver.exe: 64 byte "
+        "feature reports carry the commands, 4096 byte output reports carry the screen as RGB565 frames. "
+        "With that it runs the 20 lighting effects, per-key colors, uploads an image or a GIF of up to 140 "
+        "frames to the little 128x128 screen and syncs its clock. There is also a music mode where the keys "
+        "react to whatever the PC is playing. A CLI plus a PySide6 GUI with saved profiles, and an installer "
+        "that sets up the udev rule. Only the wired USB connection is tested, the dongle and Bluetooth are "
+        "not supported. Unofficial, not affiliated with AJAZZ."
+    ),
+    "proj-dotfiles.svg": (
+        "A KDE Plasma 6 rice for my Fedora machine, in the same cassette palette as this page: amber CRT in "
+        "dark mode, warm beige in light mode. Two color schemes, two Global Theme packages that switch "
+        "colors, wallpaper, icons and cursor in one go, a Konsole profile, Space Mono and VT323, a thin top "
+        "bar with an audio visualizer, and a couple of QML widgets I wrote, a date readout that themes "
+        "itself and a slow wireframe globe. One install.sh, no root needed. The wallpapers are third party "
+        "images from Wallhaven, so check their sources before reusing them."
     ),
 }
 

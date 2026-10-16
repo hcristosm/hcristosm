@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="204" viewBox="0 0 620 204">
+  <style>
+    text {
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #4a2e18;
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #f2dcb0; }
+    }
+  </style>
+  <text x="2" y="15">My keyboard, an AJAZZ AK820 Pro, only ships with a Windows configurator, so I</text>
+  <text x="2" y="35">took that apart to get it working on Linux. The HID protocol came out of the</text>
+  <text x="2" y="55">vendor&#x27;s DeviceDriver.exe: 64 byte feature reports carry the commands, 4096</text>
+  <text x="2" y="75">byte output reports carry the screen as RGB565 frames. With that it runs the</text>
+  <text x="2" y="95">20 lighting effects, per-key colors, uploads an image or a GIF of up to 140</text>
+  <text x="2" y="115">frames to the little 128x128 screen and syncs its clock. There is also a music</text>
+  <text x="2" y="135">mode where the keys react to whatever the PC is playing. A CLI plus a PySide6</text>
+  <text x="2" y="155">GUI with saved profiles, and an installer that sets up the udev rule. Only the</text>
+  <text x="2" y="175">wired USB connection is tested, the dongle and Bluetooth are not supported.</text>
+  <text x="2" y="195">Unofficial, not affiliated with AJAZZ.</text>
+</svg>
