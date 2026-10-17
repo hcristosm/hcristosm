@@ -34,7 +34,7 @@
   <line x1="300" y1="24" x2="300" y2="65" class="divider" opacity="0.5"/>
 
   <text x="20" y="42" class="label">CURRENT STREAK</text>
-  <text x="20" y="68" class="stat-number">3 days</text>
+  <text x="20" y="68" class="stat-number">4 days</text>
 
   <text x="320" y="42" class="label">LONGEST STREAK</text>
   <text x="320" y="68" class="stat-number">12 days</text>
