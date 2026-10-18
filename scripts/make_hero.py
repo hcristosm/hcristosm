@@ -8,7 +8,7 @@ se repete aqui."""
 from palette import DARK, LIGHT, rainbow_stripe
 
 NAME = "Mateus Leptokarydis"
-ROLE = "geologist turned developer"
+ROLE = "geologist turned developer · MSc in Geosciences"
 
 WIDTH = 620
 HEIGHT = 130
