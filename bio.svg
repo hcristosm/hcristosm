@@ -10,9 +10,9 @@
       text { fill: #f2dcb0; }
     }
   </style>
-  <text x="2" y="16">I write mostly Python. Computer vision with OpenCV (Canny, watershed,</text>
-  <text x="2" y="38">distance transforms), small CLI tools I try to keep tested (pytest,</text>
-  <text x="2" y="60">typer), and bits of automation. This page is one of them: it pulls the</text>
+  <text x="2" y="16">I write mostly Python. Computer vision with OpenCV (Canny edges, frame</text>
+  <text x="2" y="38">by frame target tracking), small CLI tools, and bits of automation I try</text>
+  <text x="2" y="60">to keep tested with pytest. This page is one of them: it pulls the</text>
   <text x="2" y="82">GitHub API and draws its own SVGs with plain SMIL, no JavaScript. Lately</text>
   <text x="2" y="104">also some reverse engineering, reading a vendor&#x27;s Windows tool so my</text>
   <text x="2" y="126">keyboard works on Linux. I try to check what I build against ground</text>

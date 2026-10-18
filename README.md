@@ -18,11 +18,11 @@
 
 <img src="./tagline.svg" width="620" alt="Geologist who got curious about code. I build small computer vision and automation tools, mostly to solve problems I ran into myself. This profile is where I keep them."/><img src="./cursor.svg" width="8" height="16" alt=""/>
 
-<img src="./bio.svg" width="620" alt="I write mostly Python. Computer vision with OpenCV (Canny, watershed, distance transforms), small CLI tools I try to keep tested (pytest, typer), and bits of automation. This page is one of them: it pulls the GitHub API and draws its own SVGs with plain SMIL, no JavaScript. Lately also some reverse engineering, reading a vendor&#x27;s Windows tool so my keyboard works on Linux. I try to check what I build against ground truth or a zero shot baseline like SAM 2 or DBSCAN, mostly because I do not trust my own results until something else agrees with them. Still learning a lot of this as I go."/>
+<img src="./bio.svg" width="620" alt="I write mostly Python. Computer vision with OpenCV (Canny edges, frame by frame target tracking), small CLI tools, and bits of automation I try to keep tested with pytest. This page is one of them: it pulls the GitHub API and draws its own SVGs with plain SMIL, no JavaScript. Lately also some reverse engineering, reading a vendor&#x27;s Windows tool so my keyboard works on Linux. I try to check what I build against ground truth or a zero shot baseline like SAM 2 or DBSCAN, mostly because I do not trust my own results until something else agrees with them. Still learning a lot of this as I go."/>
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 
-<img src="./stack.svg" width="620" alt="python, go, opencv, canny, sam2, pyside6, qgis, gdal, kde plasma, docker, git, linux"/>
+<img src="./stack.svg" width="620" alt="python, opencv, canny, sam2, pyside6, qgis, gdal, kde plasma, docker, git, linux"/>
 
 <img src="./hd-how-i-work.svg" width="620" alt="how i work"/>
 
@@ -33,10 +33,6 @@
 **[ak820-linux](https://github.com/hcristosm/ak820-linux)** &nbsp;·&nbsp; <samp>python, pyside6, hid, reverse engineering</samp>
 
 <img src="./proj-ak820.svg" width="620" alt="My keyboard, an AJAZZ AK820 Pro, only ships with a Windows configurator, so I took that apart to get it working on Linux. The HID protocol came out of the vendor&#x27;s DeviceDriver.exe: 64 byte feature reports carry the commands, 4096 byte output reports carry the screen as RGB565 frames. With that it runs the 20 lighting effects, per-key colors, uploads an image or a GIF of up to 140 frames to the little 128x128 screen and syncs its clock. There is also a music mode where the keys react to whatever the PC is playing. A CLI plus a PySide6 GUI with saved profiles, and an installer that sets up the udev rule. Only the wired USB connection is tested, the dongle and Bluetooth are not supported. Unofficial, not affiliated with AJAZZ."/>
-
-**[declutter](https://github.com/hcristosm/declutter)** &nbsp;·&nbsp; <samp>go, cobra, bubbletea</samp>
-
-<img src="./proj-declutter.svg" width="620" alt="Cleans up a messy folder using an LLM. It started as a fix for my own downloads folder. One Go binary, nothing to install alongside it. It walks the directory, hashes every file with SHA-256, asks an OpenAI compatible or local Ollama endpoint where things should go, and shows you the moves in a Bubble Tea diff. Nothing is touched until you say yes, there is a dry run if you would rather just look, and every session goes into a JSON history file so any run can be undone."/>
 
 **[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; <samp>python, geopandas, geopackage, leaflet, chart.js, github actions, pytest</samp> &nbsp;·&nbsp; [dashboard ao vivo](https://hcristosm.github.io/ORCA/)
 
@@ -49,10 +45,6 @@
 **[dotfiles-cassette-futurism](https://github.com/hcristosm/dotfiles-cassette-futurism)** &nbsp;·&nbsp; <samp>kde plasma, qml, shell</samp>
 
 <img src="./proj-dotfiles.svg" width="620" alt="A KDE Plasma 6 rice for my Fedora machine, in the same cassette palette as this page: amber CRT in dark mode, warm beige in light mode. Two color schemes, two Global Theme packages that switch colors, wallpaper, icons and cursor in one go, a Konsole profile, Space Mono and VT323, a thin top bar with an audio visualizer, and a couple of QML widgets I wrote, a date readout that themes itself and a slow wireframe globe. One install.sh, no root needed. The wallpapers are third party images from Wallhaven, so check their sources before reusing them."/>
-
-**[GranuLens](https://github.com/hcristosm/granulens)** &nbsp;·&nbsp; <samp>python, opencv, typer, pytest</samp> &nbsp;·&nbsp; <samp>archived</samp>
-
-<img src="./proj-granulens.svg" width="620" alt="Measures grains from a photo. Gaussian blur, Otsu threshold, then a distance transform feeds Watershed to pull apart particles that are touching. For every grain you get area, equivalent and Feret diameters, aspect ratio and sphericity, plus the D10, D50 and D90 for the sample. It writes out a colored overlay, the PSD curve, a CSV per particle and a summary JSON. Runs as a CLI or as a Python API. It is classical computer vision, so it wants reasonably lit, reasonably separated grains."/>
 
 <img src="./hd-stats.svg" width="620" alt="stats"/>
 

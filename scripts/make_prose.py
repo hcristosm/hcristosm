@@ -65,8 +65,8 @@ TAGLINE = (
 )
 
 BIO = (
-    "I write mostly Python. Computer vision with OpenCV (Canny, watershed, distance transforms), small CLI "
-    "tools I try to keep tested (pytest, typer), and bits of automation. This page is one of them: it pulls "
+    "I write mostly Python. Computer vision with OpenCV (Canny edges, frame by frame target tracking), "
+    "small CLI tools, and bits of automation I try to keep tested with pytest. This page is one of them: it pulls "
     "the GitHub API and draws its own SVGs with plain SMIL, no JavaScript. Lately also some reverse "
     "engineering, reading a vendor's Windows tool so my keyboard works on Linux. I try to check what I build "
     "against ground truth or a zero shot baseline like SAM 2 or DBSCAN, mostly because I do not trust my "
@@ -83,13 +83,6 @@ COLLAB = (
 )
 
 PROJECTS = {
-    "proj-declutter.svg": (
-        "Cleans up a messy folder using an LLM. It started as a fix for my own downloads folder. One Go "
-        "binary, nothing to install alongside it. It walks the directory, hashes every file with SHA-256, "
-        "asks an OpenAI compatible or local Ollama endpoint where things should go, and shows you the moves "
-        "in a Bubble Tea diff. Nothing is touched until you say yes, there is a dry run if you would rather "
-        "just look, and every session goes into a JSON history file so any run can be undone."
-    ),
     "proj-videomonitoramento.svg": (
         "My master's thesis at IG-UNICAMP. The question was whether a cheap camera can catch the moment a "
         "vegetated slope on the Serra do Mar starts moving. An OpenCV pipeline tracks 40mm targets frame by "
@@ -98,13 +91,6 @@ PROJECTS = {
         "with DBSCAN grouping the masks, because I wanted a second opinion that was not mine. The size is "
         "what makes it plausible in the field: 30 minutes of video is 113MB, the coordinates it comes down "
         "to are about 20MB. One site and a limited set of runs, so it argues for feasibility, not much more."
-    ),
-    "proj-granulens.svg": (
-        "Measures grains from a photo. Gaussian blur, Otsu threshold, then a distance transform feeds "
-        "Watershed to pull apart particles that are touching. For every grain you get area, equivalent and "
-        "Feret diameters, aspect ratio and sphericity, plus the D10, D50 and D90 for the sample. It writes "
-        "out a colored overlay, the PSD curve, a CSV per particle and a summary JSON. Runs as a CLI or as a "
-        "Python API. It is classical computer vision, so it wants reasonably lit, reasonably separated grains."
     ),
     "proj-orca.svg": (
         "ORCA pulls the geological risk sectors that CPRM/SGB publishes for all 27 states and crosses each "
