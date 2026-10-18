@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="180" viewBox="0 0 620 180">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="202" viewBox="0 0 620 202">
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
@@ -10,12 +10,13 @@
       text { fill: #f2dcb0; }
     }
   </style>
-  <text x="2" y="16">I code with LLM agents most days. Claude for design, review and the</text>
-  <text x="2" y="38">refactors I would struggle with alone, and Cline running local models</text>
-  <text x="2" y="60">like Qwen2.5-Coder through Ollama for the repetitive edits. I write the</text>
-  <text x="2" y="82">spec and the constraints, the agent drafts, and I read the diff and run</text>
-  <text x="2" y="104">the tests before anything gets committed. I still get things wrong this</text>
-  <text x="2" y="126">way. I am putting it here because I would rather tell you how the code</text>
-  <text x="2" y="148">got written than have you assume, and because if something in these</text>
-  <text x="2" y="170">repos is broken, it is on me either way.</text>
+  <text x="2" y="16">I code with LLM agents most days. Claude Code writes a good part of the</text>
+  <text x="2" y="38">code, and Cline running local models like Qwen2.5-Coder through Ollama</text>
+  <text x="2" y="60">handles the repetitive edits. I bring the problem, the domain knowledge</text>
+  <text x="2" y="82">and the decisions, write the spec and the constraints, then read the</text>
+  <text x="2" y="104">diff and run the tests before anything gets committed, and change course</text>
+  <text x="2" y="126">when the result does not match what the data says. I still get things</text>
+  <text x="2" y="148">wrong this way. I would rather tell you how the code got written than</text>
+  <text x="2" y="170">have you assume, and if something in these repos is broken, it is on me</text>
+  <text x="2" y="192">either way.</text>
 </svg>

@@ -10,13 +10,13 @@
       text { fill: #f2dcb0; }
     }
   </style>
-  <text x="2" y="16">I write mostly Python. Computer vision with OpenCV (Canny edges, frame</text>
-  <text x="2" y="38">by frame target tracking), small CLI tools, and bits of automation I try</text>
-  <text x="2" y="60">to keep tested with pytest. This page is one of them: it pulls the</text>
-  <text x="2" y="82">GitHub API and draws its own SVGs with plain SMIL, no JavaScript. Lately</text>
-  <text x="2" y="104">also some reverse engineering, reading a vendor&#x27;s Windows tool so my</text>
-  <text x="2" y="126">keyboard works on Linux. I try to check what I build against ground</text>
-  <text x="2" y="148">truth or a zero shot baseline like SAM 2 or DBSCAN, mostly because I do</text>
-  <text x="2" y="170">not trust my own results until something else agrees with them. Still</text>
-  <text x="2" y="192">learning a lot of this as I go.</text>
+  <text x="2" y="16">I write mostly Python. On the geo side, GeoPandas and GeoPackage over</text>
+  <text x="2" y="38">public data, like the CPRM/SGB risk sectors behind ORCA. On the vision</text>
+  <text x="2" y="60">side, OpenCV pipelines (Canny edges, contour filters, frame by frame</text>
+  <text x="2" y="82">tracking) from my master&#x27;s research on slope monitoring. Lately also</text>
+  <text x="2" y="104">some reverse engineering, reading a vendor&#x27;s Windows tool so my keyboard</text>
+  <text x="2" y="126">works on Linux. I keep tests where the logic is worth it and check</text>
+  <text x="2" y="148">results against ground truth or an independent baseline like SAM 2,</text>
+  <text x="2" y="170">because I do not trust my own numbers until something else agrees with</text>
+  <text x="2" y="192">them. Still learning a lot of this as I go.</text>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="164" viewBox="0 0 620 164">
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="184" viewBox="0 0 620 184">
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, 'Liberation Mono', monospace;
@@ -11,11 +11,12 @@
     }
   </style>
   <text x="2" y="15">A KDE Plasma 6 rice for my Fedora machine, in the same cassette palette as</text>
-  <text x="2" y="35">this page: amber CRT in dark mode, warm beige in light mode. Two color</text>
-  <text x="2" y="55">schemes, two Global Theme packages that switch colors, wallpaper, icons and</text>
-  <text x="2" y="75">cursor in one go, a Konsole profile, Space Mono and VT323, a thin top bar with</text>
-  <text x="2" y="95">an audio visualizer, and a couple of QML widgets I wrote, a date readout that</text>
-  <text x="2" y="115">themes itself and a slow wireframe globe. One install.sh, no root needed. The</text>
-  <text x="2" y="135">wallpapers are third party images from Wallhaven, so check their sources</text>
-  <text x="2" y="155">before reusing them.</text>
+  <text x="2" y="35">this page: amber CRT in dark mode, rust on warm beige in light mode. Two color</text>
+  <text x="2" y="55">schemes and two Global Themes that switch colors, wallpaper, icons and cursor</text>
+  <text x="2" y="75">in one go, monochrome icons that invert themselves per background, an amber</text>
+  <text x="2" y="95">Bibata cursor, Space Mono and VT323, a Konsole profile and flat window</text>
+  <text x="2" y="115">borders. A thin top bar with an audio visualizer, plus QML widgets I wrote: a</text>
+  <text x="2" y="135">date readout that themes itself off the active color scheme and an optional</text>
+  <text x="2" y="155">slow wireframe globe. One install.sh, no root needed. The wallpapers are third</text>
+  <text x="2" y="175">party images from Wallhaven, so check their sources before reusing them.</text>
 </svg>
