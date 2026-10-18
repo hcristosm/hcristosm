@@ -12,6 +12,16 @@
 
 </div>
 
+<img src="./hd-stats.svg" width="620" alt="stats"/>
+
+<div align="center">
+
+<img src="./streak.svg" width="620" alt="Current and longest streak"/>
+
+<img src="./langs.svg" width="620" alt="Top languages by bytes and by repo"/>
+
+</div>
+
 <img src="./hd-about.svg" width="620" alt="about"/>
 
 <img src="./tagline.svg" width="620" alt="Geologist who got curious about code. I build small computer vision and automation tools, mostly to solve problems I ran into myself. This profile is where I keep them."/><img src="./cursor.svg" width="8" height="16" alt=""/>
@@ -39,13 +49,3 @@
 **[dotfiles-cassette-futurism](https://github.com/hcristosm/dotfiles-cassette-futurism)** &nbsp;·&nbsp; <samp>kde plasma, qml, shell</samp>
 
 <img src="./proj-dotfiles.svg" width="620" alt="A KDE Plasma 6 rice for my Fedora machine, in the same cassette palette as this page: amber CRT in dark mode, warm beige in light mode. Two color schemes, two Global Theme packages that switch colors, wallpaper, icons and cursor in one go, a Konsole profile, Space Mono and VT323, a thin top bar with an audio visualizer, and a couple of QML widgets I wrote, a date readout that themes itself and a slow wireframe globe. One install.sh, no root needed. The wallpapers are third party images from Wallhaven, so check their sources before reusing them."/>
-
-<img src="./hd-stats.svg" width="620" alt="stats"/>
-
-<div align="center">
-
-<img src="./streak.svg" width="620" alt="Current and longest streak"/>
-
-<img src="./langs.svg" width="620" alt="Top languages by bytes and by repo"/>
-
-</div>
