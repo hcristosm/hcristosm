@@ -10,9 +10,10 @@ import pixel  # noqa: E402
 import scene_1  # noqa: E402
 import scene_2  # noqa: E402
 import scene_3  # noqa: E402
+import scene_4  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-SCENES = [scene_1, scene_2, scene_3]
+SCENES = [scene_1, scene_2, scene_3, scene_4]
 
 
 @pytest.mark.parametrize("scene", SCENES)

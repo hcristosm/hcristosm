@@ -6,9 +6,10 @@ import pixel
 import scene_1
 import scene_2
 import scene_3
+import scene_4
 
 ROOT = Path(__file__).resolve().parent.parent
-SCENES = [scene_1, scene_2, scene_3]
+SCENES = [scene_1, scene_2, scene_3, scene_4]
 
 
 def main():
