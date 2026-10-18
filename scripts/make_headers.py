@@ -7,7 +7,6 @@ from palette import DARK, LIGHT, RAINBOW
 
 HEADERS = {
     "hd-about.svg": "» whoami",
-    "hd-stack.svg": "» cat stack.txt",
     "hd-how-i-work.svg": "» ps aux | grep agent",
     "hd-projects.svg": "» ls projects/",
     "hd-stats.svg": "» uptime",

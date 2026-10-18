@@ -18,10 +18,6 @@
 
 <img src="./bio.svg" width="620" alt="I write mostly Python. Computer vision with OpenCV (Canny edges, frame by frame target tracking), small CLI tools, and bits of automation I try to keep tested with pytest. This page is one of them: it pulls the GitHub API and draws its own SVGs with plain SMIL, no JavaScript. Lately also some reverse engineering, reading a vendor&#x27;s Windows tool so my keyboard works on Linux. I try to check what I build against ground truth or a zero shot baseline like SAM 2 or DBSCAN, mostly because I do not trust my own results until something else agrees with them. Still learning a lot of this as I go."/>
 
-<img src="./hd-stack.svg" width="620" alt="stack"/>
-
-<img src="./stack.svg" width="620" alt="python, opencv, canny, sam2, pyside6, qgis, gdal, kde plasma, docker, git, linux"/>
-
 <img src="./hd-how-i-work.svg" width="620" alt="how i work"/>
 
 <img src="./collab.svg" width="620" alt="I code with LLM agents most days. Claude for design, review and the refactors I would struggle with alone, and Cline running local models like Qwen2.5-Coder through Ollama for the repetitive edits. I write the spec and the constraints, the agent drafts, and I read the diff and run the tests before anything gets committed. I still get things wrong this way. I am putting it here because I would rather tell you how the code got written than have you assume, and because if something in these repos is broken, it is on me either way."/>
@@ -61,8 +57,7 @@ Every graphic here is built and stored in this repo. No third party servers, no 
 
 * **Design system**: A vintage cassette palette. Warm browns, amber (paper print in light mode, phosphor CRT amber in dark mode), and a pastel rainbow accent taken from 70s and 80s tape labels. Every generator reads it from [`scripts/palette.py`](scripts/palette.py), so the page looks like one object instead of a pile of loose images.
 * **`ascii.svg`**: Built by [`scripts/make_portrait.py`](scripts/make_portrait.py), which turns character density matrices into an SVG framed like a cassette window, with a vignette and a rainbow spine. It draws itself line by line with plain SMIL (`<set>` elements), since GitHub strips JavaScript.
-* **Section headers (`hd-*.svg`)**: [`scripts/make_headers.py`](scripts/make_headers.py) writes them as terminal prompts (`» whoami`, `» cat stack.txt`, …) sitting on a tape label chip, trailing off into a dotted sprocket track.
-* **`stack.svg`**: From [`scripts/make_stack.py`](scripts/make_stack.py). The tech list as pills instead of plain text, each with an accent dot that rotates through the palette.
+* **Section headers (`hd-*.svg`)**: [`scripts/make_headers.py`](scripts/make_headers.py) writes them as terminal prompts (`» whoami`, `» ls projects/`, …) sitting on a tape label chip, trailing off into a dotted sprocket track.
 * **Prose (`tagline.svg`, `bio.svg`, `collab.svg`, `proj-*.svg`)**: GitHub's markdown sanitizer drops `style` attributes, so there is no way to color plain text inline. [`scripts/make_prose.py`](scripts/make_prose.py) draws the running text as bold SVG in the palette instead. Project links stay as real markdown anchors.
 * **Telemetry (`stats.svg`, `streak.svg`, `langs.svg`)**: [`make_stats.py`](scripts/make_stats.py), [`make_streak.py`](scripts/make_streak.py) and [`make_langs.py`](scripts/make_langs.py) hit GitHub's GraphQL API for contribution streaks, commit counts and language distribution. The language logos ([`lang_icons.py`](scripts/lang_icons.py)) are pulled from [Simple Icons](https://simpleicons.org) (CC0) at build time and baked in as path data, so nothing calls an icon CDN at load.
 * **Contact icons (`social-*.svg`)**: [`scripts/make_social.py`](scripts/make_social.py) builds small vintage panel chips wrapped in real markdown links. GitHub, LinkedIn and ORCID use vendored Simple Icons marks; email and Lattes use generic stroke glyphs.
