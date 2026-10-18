@@ -1,4 +1,6 @@
 """Testes das cenas em pixel art. Rodar da raiz: python3 -m pytest scripts/test_scenes.py"""
+import html
+import re
 import sys
 from pathlib import Path
 
@@ -69,3 +71,13 @@ def test_to_svg_roundtrip():
     cv = {(0, 0): "#ff0000", (1, 0): "#ff0000", (0, 1): "#00ff00", (1, 1): "#0000ff"}
     svg = pixel.to_svg(cv, 2, 2, "t")
     assert svg.count("<path") == 3 and "M0 0h2v1h-2z" in svg
+
+
+def test_readme_assets():
+    readme = (ROOT / "README.md").read_text()
+    refs = set(re.findall(r'src="\./([^"]+\.svg)"', readme))
+    assert refs == {f"scene-{n}.svg" for n in range(1, 5)}
+    assert all((ROOT / r).exists() for r in refs)
+    assert {p.name for p in ROOT.glob("*.svg")} == refs
+    for mod in SCENES:
+        assert f'alt="{html.escape(mod.TITLE)}"' in readme
