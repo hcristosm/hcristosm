@@ -9,13 +9,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import pixel  # noqa: E402
-import scene_1  # noqa: E402
-import scene_2  # noqa: E402
-import scene_3  # noqa: E402
-import scene_4  # noqa: E402
-
-ROOT = Path(__file__).resolve().parent.parent
-SCENES = [scene_1, scene_2, scene_3, scene_4]
+from make_scenes import ROOT, SCENES  # noqa: E402
 
 
 @pytest.mark.parametrize("scene", SCENES)
@@ -76,8 +70,15 @@ def test_to_svg_roundtrip():
 def test_readme_assets():
     readme = (ROOT / "README.md").read_text()
     refs = set(re.findall(r'src="\./([^"]+\.svg)"', readme))
-    assert refs == {f"scene-{n}.svg" for n in range(1, 5)}
+    assert refs == {f"scene-{n}.svg" for n in range(1, len(SCENES) + 1)}
     assert all((ROOT / r).exists() for r in refs)
     assert {p.name for p in ROOT.glob("*.svg")} == refs
     for mod in SCENES:
         assert f'alt="{html.escape(mod.TITLE)}"' in readme
+
+
+@pytest.mark.parametrize("n", range(1, len(SCENES) + 1))
+def test_committed_svg_is_fresh(n):
+    # sem a Action diária, nada mais regenera as imagens: editar uma cena sem rodar make_scenes.py falha aqui
+    scene = SCENES[n - 1]
+    assert pixel.to_svg(scene.build(), scene.W, scene.H, scene.TITLE) == (ROOT / f"scene-{n}.svg").read_text()
