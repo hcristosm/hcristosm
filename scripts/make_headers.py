@@ -10,7 +10,6 @@ HEADERS = {
     "hd-how-i-work.svg": "» ps aux | grep agent",
     "hd-projects.svg": "» ls projects/",
     "hd-stats.svg": "» uptime",
-    "hd-about-this-page.svg": "» man this-page",
 }
 
 WIDTH = 620
