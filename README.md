@@ -26,7 +26,7 @@ A CPRM/SGB, o Serviço Geológico do Brasil, publica setores de risco geológico
 
 <samp>CPRM/SGB + mapeamentos estaduais e municipais → BELUGA → ORCA → chuva sobre cada setor, num mapa</samp>
 
-**[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; <samp>python, geopandas, leaflet, github actions</samp> &nbsp;·&nbsp; [dashboard ao vivo](https://hcristosm.github.io/ORCA/)
+**[ORCA](https://github.com/hcristosm/ORCA)** &nbsp;·&nbsp; *Open Risk and Catastrophe Aggregator* &nbsp;·&nbsp; <samp>python, geopandas, leaflet, github actions</samp> &nbsp;·&nbsp; [dashboard ao vivo](https://hcristosm.github.io/ORCA/)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./orca-dark.svg">
@@ -35,7 +35,7 @@ A CPRM/SGB, o Serviço Geológico do Brasil, publica setores de risco geológico
 
 Mostrar onde está chovendo forte sobre um setor de risco geológico conhecido, juntando num só mapa duas informações públicas que quase nunca aparecem juntas. O ORCA soma a chuva recente e a prevista sobre cada setor e destaca os que passam de um limiar que você escolhe, com referências de limiares usados por defesas civis. Um pipeline em Python atualiza os dados todo dia e gera arquivos estáticos; o dashboard roda direto no navegador, sem servidor, e se instala como app no celular, onde responde se o lugar em que você está pode entrar em alerta. A chuva é modelada, não medida em pluviômetro: o ORCA serve para acompanhar e estudar, não substitui o alerta oficial.
 
-**[BELUGA](https://github.com/hcristosm/BELUGA)** &nbsp;·&nbsp; <samp>python, geopandas, yaml</samp>
+**[BELUGA](https://github.com/hcristosm/BELUGA)** &nbsp;·&nbsp; *Brazilian External Landslide & Unmapped Geohazard Archive* &nbsp;·&nbsp; <samp>python, geopandas, yaml</samp>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./beluga-dark.svg">
