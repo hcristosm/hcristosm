@@ -1,13 +1,17 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./header-en-dark.svg">
-  <img src="./header-en-light.svg" alt="An ASCII humpback whale breaching from the sea and spinning, next to the name Mateus Leptokarydis, geologist, MSc in Geosciences, and the projects ORCA and BELUGA">
+  <source media="(prefers-color-scheme: dark)" srcset="./header-dark.svg">
+  <img src="./header-light.svg" alt="An ASCII humpback whale swimming, with bubbles going by">
 </picture>
+
+# Mateus Leptokarydis
+
+Geologist (UNICAMP) · MSc in Geosciences (IG-UNICAMP)
 
 *[Leia em português](README.md)*
 
 [GitHub](https://github.com/hcristosm) · [LinkedIn](https://www.linkedin.com/in/mateus-leptokarydis/) · [Lattes](https://lattes.cnpq.br/4735526517901649) · [ORCID](https://orcid.org/0009-0000-5877-5763) · [Email](mailto:hcristosm@gmail.com)
 
-Geologist, MSc in Geosciences from IG-UNICAMP, who got curious about code. I have mapped geological risk areas myself, and these days most of my time goes into two sibling projects built on Brazil's public risk data:
+A geologist who got curious about code. I have mapped geological risk areas myself, and these days most of my time goes into two sibling projects built on Brazil's public risk data:
 
 - **[ORCA](https://github.com/hcristosm/ORCA)** puts the geological risk sectors and the rain that fell on them on the same map, updated every day. [Live dashboard](https://hcristosm.github.io/ORCA/).
 - **[BELUGA](https://github.com/hcristosm/BELUGA)** gathers the risk maps that states and cities make on their own into one standard dataset, so ORCA can see past the federal survey.

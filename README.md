@@ -1,13 +1,17 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./header-dark.svg">
-  <img src="./header-light.svg" alt="Uma jubarte em ASCII saltando do mar e girando, ao lado do nome Mateus Leptokarydis, geólogo, MSc em Geociências, e dos projetos ORCA e BELUGA">
+  <img src="./header-light.svg" alt="Uma jubarte em ASCII nadando, com bolhas passando">
 </picture>
+
+# Mateus Leptokarydis
+
+Geólogo pela UNICAMP · Mestre em Geociências pelo IG-UNICAMP
 
 *[Read in English](README.en.md)*
 
 [GitHub](https://github.com/hcristosm) · [LinkedIn](https://www.linkedin.com/in/mateus-leptokarydis/) · [Lattes](https://lattes.cnpq.br/4735526517901649) · [ORCID](https://orcid.org/0009-0000-5877-5763) · [Email](mailto:hcristosm@gmail.com)
 
-Geólogo, mestre em Geociências pelo IG-UNICAMP, que ficou curioso com código. Já mapeei área de risco geológico em campo, e hoje a maior parte do meu tempo vai para dois projetos irmãos feitos com os dados públicos de risco do Brasil:
+Geólogo que ficou curioso com código. Já mapeei área de risco geológico em campo, e hoje a maior parte do meu tempo vai para dois projetos irmãos feitos com os dados públicos de risco do Brasil:
 
 - **[ORCA](https://github.com/hcristosm/ORCA)** mostra no mesmo mapa os setores de risco geológico e a chuva que caiu sobre eles, atualizado todo dia. [Dashboard ao vivo](https://hcristosm.github.io/ORCA/).
 - **[BELUGA](https://github.com/hcristosm/BELUGA)** reúne os mapeamentos de risco que estados e prefeituras fazem por conta própria numa base padronizada, para o ORCA enxergar além do levantamento federal.

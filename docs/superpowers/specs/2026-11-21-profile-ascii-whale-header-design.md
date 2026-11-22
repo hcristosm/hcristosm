@@ -52,3 +52,8 @@ Um header que chame a atenção e não pareça um perfil padrão de emojis e tex
 - **Descrições na ordem propósito, depois conteúdo**, curtas, sem nada que mude com o tempo: nada de datas, contagens (setores, testes, vídeos, efeitos), lista de municípios cobertos ou selo de "novo". Os projetos crescem e o perfil não deve precisar de atualização a cada mudança. As linhas de tecnologia ficam só com o essencial.
 - **A orca deixou o azul**: corpo em grafite (preto no tema claro, cinza no escuro) e manchas brancas mais claras, pelo campo `colors` da cena em `ascii_art.py`. A jubarte e a beluga continuam com a paleta comum.
 - **Caracteres mais densos (2026-11-22):** a escala de caracteres passa por uma curva (`DENSITY = 0.6` em `ascii_art.py`) que puxa os tons médios para os caracteres mais cheios, para os três animais destacarem do fundo. A ordem da escala e a sombra continuam as mesmas.
+
+## Header só com a baleia, grande (2026-11-22)
+
+- O header passa a ser **só a jubarte**, na largura da coluna do README (grade de 184×61 a 7,5 px, cerca de 830 px), com o enquadramento fechado em volta dela. O nome vira título em markdown logo abaixo, seguido da formação ("Geólogo pela UNICAMP · Mestre em Geociências pelo IG-UNICAMP"), em texto comum.
+- Sem texto dentro da imagem, o header é o mesmo nas duas línguas: `header-dark.svg` e `header-light.svg`. Os arquivos `header-en-*` saíram.

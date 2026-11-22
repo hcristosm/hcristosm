@@ -25,31 +25,29 @@ def frame0():
 
 
 @pytest.mark.parametrize("path", FILES.values(), ids=lambda p: p.name)
-def test_svg_is_static_light_and_transparent(path):
+def test_svg_is_static_and_transparent(path):
     svg = path.read_text()
     ET.fromstring(svg)  # XML bem formado
     assert "<script" not in svg and "@import" not in svg
     assert "https://" not in svg and "http://" not in svg.replace("http://www.w3.org/2000/svg", "")
     assert "<rect" not in svg  # sem painel: o fundo é o da página
-    assert len(svg.encode()) < 400 * 1024
+    assert len(svg.encode()) < 1024 * 1024
     assert svg.count('<g class="fr"') == SC["n"]
     assert "<title>" in svg
 
 
-@pytest.mark.parametrize("theme", aa.THEMES)
-def test_languages_share_the_frames(theme):
-    assert frames_of(FILES[("pt", theme)]) == frames_of(FILES[("en", theme)])
+@pytest.mark.parametrize("path", FILES.values(), ids=lambda p: p.name)
+def test_header_fits_the_readme_column(path):
+    width = int(re.search(r'width="(\d+)"', path.read_text()).group(1))
+    assert 780 <= width <= 840  # a coluna do README no GitHub tem cerca de 830 px
 
 
-def test_text_matches_language():
-    assert "geólogo" in FILES[("pt", "dark")].read_text()
-    assert "geologist" in FILES[("en", "light")].read_text()
-
-
-def test_readmes_pick_the_theme():
-    for readme, base in (("README.md", "header"), ("README.en.md", "header-en")):
+def test_readmes_show_whale_then_name_as_text():
+    for readme in ("README.md", "README.en.md"):
         text = (aa.ROOT / readme).read_text()
-        assert f'srcset="./{base}-dark.svg"' in text and f'src="./{base}-light.svg"' in text
+        assert 'srcset="./header-dark.svg"' in text and 'src="./header-light.svg"' in text
+        assert text.index("</picture>") < text.index("# Mateus Leptokarydis")
+        assert "UNICAMP" in text.split("# Mateus Leptokarydis", 1)[1].split("\n\n", 2)[1]
 
 
 def test_frames_are_deterministic(frame0):
@@ -58,9 +56,9 @@ def test_frames_are_deterministic(frame0):
 
 @pytest.mark.parametrize("theme", aa.THEMES)
 def test_committed_header_matches_generator(frame0, theme):
-    """Confere o primeiro quadro; gerar os 40 leva uns dois minutos (python3 scripts/make_header.py)."""
+    """Confere o primeiro quadro; gerar os 40 leva alguns minutos (python3 scripts/make_header.py)."""
     expected = "".join(aa.line_svg(line, 2, aa.LLH + r * aa.LLH, theme) for r, line in enumerate(frame0))
-    assert frames_of(FILES[("pt", theme)])[0] == f'<g class="fr" style="animation-delay:0.000s">{expected}</g>'
+    assert frames_of(FILES[theme])[0] == f'<g class="fr" style="animation-delay:0.000s">{expected}</g>'
 
 
 def test_whale_fits_the_frame(frame0):

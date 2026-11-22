@@ -35,8 +35,9 @@ THEMES = {
 # white_ink: tinta da pele branca no tema claro (base, quanto a sombra soma); a beluga é toda branca
 # e sumiria no papel com pouca tinta. colors: troca de cores de um tema só nesta cena.
 SCENES = {
-    "humpback": dict(cols=106, rows=36, x_range=(-1.26, 1.04), y_center=-0.09, period=2.8, n=40,
-                     bubbles=12, white_ink=(0.12, 0.55)),
+    # o header é só a baleia, na largura toda da coluna do README (cerca de 830 px)
+    "humpback": dict(cols=184, rows=61, x_range=(-1.08, 0.88), y_center=-0.10, period=2.8, n=40,
+                     bubbles=25, white_ink=(0.12, 0.55)),
     "orca": dict(cols=73, rows=25, x_range=(-0.95, 0.95), y_center=0.05, period=1.6, n=32,
                  bubbles=7, white_ink=(0.08, 0.5),
                  # orca é preta e branca: grafite no lugar do azul, e as manchas brancas mais claras
