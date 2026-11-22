@@ -60,8 +60,12 @@ def loop_seconds(name):
     return SCENES[name]["period"] * STROKES
 
 
+DENSITY = 0.6  # < 1 puxa os tons médios para os caracteres mais cheios (#, $, @): silhueta mais densa
+
+
 def ramp(v):
-    return RAMP[min(len(RAMP) - 1, max(0, int(v * len(RAMP))))]
+    v = max(0.0, v) ** DENSITY
+    return RAMP[min(len(RAMP) - 1, int(v * len(RAMP)))]
 
 
 def bubbles(name, i):
