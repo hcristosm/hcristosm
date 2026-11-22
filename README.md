@@ -1,4 +1,7 @@
-<img src="./header.svg" alt="Uma jubarte em ASCII saltando do mar e girando, ao lado do nome Mateus Leptokarydis, geólogo, MSc em Geociências, e dos projetos ORCA e BELUGA"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./header-dark.svg">
+  <img src="./header-light.svg" alt="Uma jubarte em ASCII saltando do mar e girando, ao lado do nome Mateus Leptokarydis, geólogo, MSc em Geociências, e dos projetos ORCA e BELUGA">
+</picture>
 
 *[Read in English](README.en.md)*
 

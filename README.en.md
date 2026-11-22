@@ -1,4 +1,7 @@
-<img src="./header-en.svg" alt="An ASCII humpback whale breaching from the sea and spinning, next to the name Mateus Leptokarydis, geologist, MSc in Geosciences, and the projects ORCA and BELUGA"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./header-en-dark.svg">
+  <img src="./header-en-light.svg" alt="An ASCII humpback whale breaching from the sea and spinning, next to the name Mateus Leptokarydis, geologist, MSc in Geosciences, and the projects ORCA and BELUGA">
+</picture>
 
 *[Leia em português](README.md)*
 

@@ -12,7 +12,7 @@ Um header que chame a atenção e não pareça um perfil padrão de emojis e tex
 - **Pose fixa de salto**, a partir de uma foto de referência: saindo da água na diagonal, cabeça para cima e para a direita, de barriga para cima (barriga branca com pregas), a nadadeira peitoral de trás branca e estendida para cima e para a esquerda, a da frente escura e reta para cima. Nada de nado animado.
 - **Mar** como uma faixa com textura de ondas que **gira junto** com a baleia. A parte submersa não aparece. Espuma na linha d'água e respingos que mudam a cada quadro.
 - **Sem estilo fastfetch e sem sonar.** O texto (nome, formação, uma linha para o ORCA e uma para o BELUGA) fica parado, **ao lado** da baleia.
-- **README.md em português**, `README.en.md` em inglês, cada um com link para o outro. O header tem versão em cada língua (`header.svg`, `header-en.svg`), com os mesmos quadros.
+- **README.md em português**, `README.en.md` em inglês, cada um com link para o outro. O header tem versão em cada língua (`header-*-dark.svg`, `header-*-light.svg`), com os mesmos quadros.
 
 ## Abordagens consideradas
 
@@ -28,5 +28,5 @@ Um header que chame a atenção e não pareça um perfil padrão de emojis e tex
 
 ## Fica para quem mexer depois
 
-- O painel é escuro nos dois temas do GitHub, porque o ASCII colorido precisa de fundo escuro.
+- **Atualização de 2026-11-22:** sem painel, com fundo transparente, e o ASCII cerca de 30% maior (fonte de 8 para 10,5 px). São quatro arquivos, `header{,-en}-{dark,light}.svg`, e o README escolhe pelo tema com `<picture>`. No tema claro o desenho é tinta no papel: a sombra fica densa e escura, e a barriga em cinza. O mar se dissolve num pontilhado fixo nas laterais, para não terminar em corte reto.
 - A seção de cenas, a linha "geologist turned developer" e o título em markdown saíram: o nome e a formação estão no header (e no `alt` da imagem).
